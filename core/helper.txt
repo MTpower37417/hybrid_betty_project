@@ -1,0 +1,10 @@
+Pattern 1234:
+
+1. cd ~/Downloads
+2. mv betty_memory_logging_patch_v99_3.zip /c/Users/Lenovo/Documents/hybrid_betty_project/core/
+3. cd /c/Users/Lenovo/Documents/hybrid_betty_project/core/
+4. unzip -o betty_memory_logging_patch_v99_3.zip
+
+✅ ทุกครั้งที่ Betty เขียนความทรงจำลงไฟล์ (stack, longterm, capsule)
+➡️ จะมี log บอกว่าเขียนที่ path ไหน 📁
+➡️ ใช้เพื่อตรวจสอบว่า memory ที่เพิ่มจริงหรือแค่ UI หลอกตา

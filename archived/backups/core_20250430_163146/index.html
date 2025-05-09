@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReflexOS - Betty with Memory</title>
+    <style>
+        body { font-family: sans-serif; padding: 2em; background: #fafafa; }
+        #chatbox { border:1px solid #ccc; padding:1em; height:400px; overflow:auto; background:white; }
+    </style>
+</head>
+<body>
+    <h2>💬 Betty (with Memory Stack)</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" style="width: 80%;" placeholder="พิมพ์ข้อความของคุณ...">
+    <button onclick="sendMessage()">ส่ง</button>
+
+<script>
+function sendMessage() {
+    const input = document.getElementById("userInput").value;
+    fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const box = document.getElementById("chatbox");
+        box.innerHTML += "<b>คุณ:</b> " + input + "<br>";
+        box.innerHTML += "<b>เบตตี้:</b> " + data.reply + "<br><br>";
+        document.getElementById("userInput").value = "";
+        box.scrollTop = box.scrollHeight;
+    });
+}
+</script>
+</body>
+</html>

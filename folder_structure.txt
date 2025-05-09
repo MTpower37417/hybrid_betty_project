@@ -1,0 +1,195 @@
+.
+ |  Companion_Engine
+ |  MemoryCapsule
+ |  architect_console
+ |   |  architect
+ |   |  core
+ |   |  logs
+ |   |  ui
+ |  architect_fix
+ |   |  core
+ |   |   |  static
+ |   |   |  templates
+ |  archived
+ |   |  __pycache__
+ |   |  backups
+ |   |   |  core_20250430_163146
+ |   |   |   |  __pycache__
+ |   |   |   |  memory
+ |   |   |   |   |  emotion
+ |   |   |   |   |  extended
+ |   |   |   |   |  imported_logs
+ |   |   |   |   |  longterm
+ |   |   |   |   |  stack
+ |   |   |   |  templates
+ |   |   |  snapshots
+ |   |  duplicate_templates
+ |   |   |  core
+ |   |   |   |  templates
+ |   |  integration
+ |   |  old_python_modules
+ |   |  old_servers
+ |   |  pycache
+ |   |  server
+ |   |  trainer
+ |  betty_optimized
+ |   |  memory
+ |   |   |  capsule
+ |   |   |  emotion
+ |   |   |  extended
+ |   |   |  longterm
+ |   |   |  stack
+ |   |  reflexos
+ |   |   |  capsule
+ |   |  static
+ |   |   |  css
+ |   |   |  js
+ |  cloud_loader
+ |  config
+ |  core
+ |   |  Betty_Ai_GPT_Trainer_Module
+ |   |   |  __pycache__
+ |   |  ReflexOS
+ |   |   |  .git
+ |   |   |  Bedroom_Betty
+ |   |   |   |  cache
+ |   |   |   |  logs
+ |   |   |  Companion_Engine
+ |   |   |  FanvueAPI
+ |   |   |  FlirtAI
+ |   |   |  Jarvis_Lab
+ |   |   |   |  logs
+ |   |   |  Office_Room
+ |   |   |   |  cache
+ |   |   |   |  capsule
+ |   |   |   |  logs
+ |   |   |   |  profile
+ |   |   |  Persona_Assets
+ |   |   |  ReflexSystem
+ |   |   |   |  cloud_loader
+ |   |   |   |  logs
+ |   |   |   |  memory
+ |   |   |   |   |  core_directive
+ |   |   |   |  profile
+ |   |   |  ReflexSystem_Fusion
+ |   |   |  ReflexSystem_Sync
+ |   |   |   |  betty
+ |   |   |   |  jarvis
+ |   |   |   |  office
+ |   |   |  Revenue_Engine
+ |   |   |  backups
+ |   |   |  bedroom
+ |   |   |   |  capsule
+ |   |   |   |  persona
+ |   |   |   |  triggers
+ |   |   |  betty_dialogue_memory
+ |   |   |  betty_emotion_logs
+ |   |   |  betty_journals
+ |   |   |  betty_safe_capsule
+ |   |   |  core
+ |   |   |   |  Bedroom_Betty
+ |   |   |   |   |  cache
+ |   |   |  imports
+ |   |   |  logs
+ |   |   |   |  logs
+ |   |   |  memory
+ |   |   |   |  bedroom
+ |   |   |   |   |  chat_capsules
+ |   |   |   |  core_directive
+ |   |   |   |  index
+ |   |   |  memory_capsule
+ |   |   |  pattern
+ |   |   |  snapshots
+ |   |   |  tools
+ |   |  __pycache__
+ |   |  lessons
+ |   |  logs
+ |   |  memory
+ |   |   |  capsule
+ |   |   |  emotion
+ |   |   |  extended
+ |   |   |  imported_logs
+ |   |   |  journal
+ |   |   |  lessons
+ |   |   |  longterm
+ |   |   |  reflexos
+ |   |   |  stack
+ |   |   |  timeline
+ |   |  structure_history
+ |   |  templates
+ |  core_backup
+ |  data
+ |  extensions
+ |   |  betty_countmsg
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_darkmode
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_exportcombo
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_exportmd
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_favorite
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_favoriteview
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_fixtimeago
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_fullstack
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_history_ui
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_logdownload
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_logsearch
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_noreset
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_preview
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_quickinject
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_relativetime
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_togglehistory
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_txtlog
+ |   |   |  __pycache__
+ |   |   |  templates
+ |   |  betty_uiclean
+ |   |   |  __pycache__
+ |   |   |  templates
+ |  logs
+ |   |  user_a
+ |  memory
+ |   |  capsule
+ |   |  emotion
+ |   |  extended
+ |   |  journal
+ |   |  longterm
+ |   |  stack
+ |   |  timeline
+ |  reflexos_webui_gpt
+ |   |  templates
+ |  templates
+ |  tools
+ |  ui
+ |   |  persona_ui
+ |   |   |  templates
+ |   |  webui
+ |   |   |  templates

@@ -1,0 +1,26 @@
+{
+  "id": "capsule_2025-05-02_17-03-45",
+  "timestamp": "2025-05-02_17-03-45",
+  "topic": "general",
+  "subtopics": [],
+  "user_input": "1",
+  "betty_response": "\u0e2a\u0e27\u0e31\u0e2a\u0e14\u0e35\u0e04\u0e48\u0e30 \u0e1c\u0e21\u0e0a\u0e37\u0e48\u0e2d Betty \u0e08\u0e30\u0e0a\u0e48\u0e27\u0e22\u0e2d\u0e30\u0e44\u0e23\u0e04\u0e38\u0e13\u0e44\u0e14\u0e49\u0e1a\u0e49\u0e32\u0e07\u0e04\u0e30?",
+  "emotion": {
+    "emotion": "neutral",
+    "intensity": 0.5
+  },
+  "tags": [
+    "neutral"
+  ],
+  "lessons": [
+    {
+      "context": "user emotion detection",
+      "pattern": "When user expresses neutral, respond with empathy",
+      "importance": 0.5
+    }
+  ],
+  "insights": [
+    "User expressed neutral about general topic"
+  ],
+  "related_memories": []
+}

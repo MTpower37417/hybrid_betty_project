@@ -1,0 +1,272 @@
+2025-05-03 18:01:24,009 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-03 18:01:24,009 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-03 18:01:24,040 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-03 18:01:24,040 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 18:07:21,867 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-03 18:07:21,867 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-03 18:07:21,902 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-03 18:07:21,902 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 18:08:36,209 - betty_integrated_server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\hybrid_betty_project\core\betty_integrated_server.py", line 53, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-05-03 18:08:36,269 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:08:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-03 18:09:01,580 - BettyAI - ERROR - เกิดข้อผิดพลาด: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-03 18:09:01,581 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:09:01] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-05-03 18:10:19,264 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-03 18:10:19,264 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-03 18:10:19,295 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-03 18:10:19,296 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 18:10:34,595 - betty_integrated_server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\hybrid_betty_project\core\betty_integrated_server.py", line 53, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-05-03 18:10:34,599 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 18:10:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-04 05:52:55,244 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 05:52:55,244 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 05:52:55,357 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 05:52:55,357 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 05:53:03,472 - betty_integrated_server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\hybrid_betty_project\core\betty_integrated_server.py", line 53, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-05-04 05:53:03,578 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 05:53:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-04 05:53:03,614 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 05:53:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-04 05:56:48,549 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 05:56:48,549 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 05:56:48,579 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 05:56:48,579 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 05:56:58,291 - betty_integrated_server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\hybrid_betty_project\core\betty_integrated_server.py", line 53, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-05-04 05:56:58,296 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 05:56:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-04 06:03:25,982 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 06:03:25,983 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 06:03:26,019 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 06:03:26,019 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 06:03:30,887 - betty_integrated_server - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\hybrid_betty_project\core\betty_integrated_server.py", line 53, in index
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\AppData\Roaming\Python\Python311\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2025-05-04 06:03:30,894 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:03:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-04 06:06:25,948 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 06:06:25,948 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 06:06:25,980 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 06:06:25,980 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 06:06:29,990 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:06:29] "GET / HTTP/1.1" 200 -
+2025-05-04 06:06:41,323 - BettyAI - INFO - รับข้อความจากผู้ใช้: สวัสดี
+2025-05-04 06:06:41,324 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:06:41] "POST /api/chat HTTP/1.1" 200 -
+2025-05-04 06:06:52,480 - BettyAI - INFO - รับข้อความจากผู้ใช้: คุณชื่ออะไร
+2025-05-04 06:06:52,481 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:06:52] "POST /api/chat HTTP/1.1" 200 -
+2025-05-04 06:06:55,165 - BettyAI - INFO - รับข้อความจากผู้ใช้: 
+2025-05-04 06:06:55,166 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:06:55] "POST /api/chat HTTP/1.1" 200 -
+2025-05-04 06:07:02,721 - BettyAI - INFO - รับข้อความจากผู้ใช้: หิวรึยัง
+2025-05-04 06:07:02,721 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:07:02] "POST /api/chat HTTP/1.1" 200 -
+2025-05-04 06:07:07,375 - BettyAI - INFO - รับข้อความจากผู้ใช้: คุณต้องเรียกตัวเองว่าหนู
+2025-05-04 06:07:07,376 - werkzeug - INFO - 127.0.0.1 - - [04/May/2025 06:07:07] "POST /api/chat HTTP/1.1" 200 -
+2025-05-04 06:11:54,447 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 06:11:54,447 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 06:11:54,482 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 06:11:54,482 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-04 06:13:12,921 - BettyAI - INFO - ระบบ Betty AI เริ่มต้นสมบูรณ์
+2025-05-04 06:13:12,922 - BettyAI - INFO - เริ่มต้นเซิร์ฟเวอร์ Betty AI ที่ http://0.0.0.0:8080
+2025-05-04 06:13:12,965 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.127:8080
+2025-05-04 06:13:12,965 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

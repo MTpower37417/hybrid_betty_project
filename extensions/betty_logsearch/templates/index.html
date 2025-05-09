@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Betty Log Search</title>
+</head>
+<body>
+    <h1>คุยกับเบตตี้</h1>
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="พิมพ์ข้อความ..." required>
+        <button type="submit">ส่ง</button>
+    </form>
+    <div id="response" style="margin-top: 20px;"></div>
+
+    <hr>
+    <h3>บทสนทนาย้อนหลัง</h3>
+    <input type="text" id="search" placeholder="🔍 ค้นข้อความ..." oninput="filterHistory()" style="width: 100%; margin-bottom: 10px;">
+    <div id="history">
+        {% for item in history %}
+            <div class="entry">
+                <small>{{ item.time }}</small>
+                <p><b>คุณ:</b> {{ item.user }}<br><b>เบตตี้:</b> {{ item.betty }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = document.getElementById('message').value;
+            const res = await fetch('/input', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message })
+            });
+            const data = await res.json();
+            document.getElementById('response').innerText = data.response || data.error;
+            setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 500);
+            setTimeout(() => location.reload(), 1000);
+        });
+
+        function filterHistory() {
+            const keyword = document.getElementById("search").value.toLowerCase();
+            const entries = document.querySelectorAll("#history .entry");
+            entries.forEach(entry => {
+                const text = entry.innerText.toLowerCase();
+                entry.style.display = text.includes(keyword) ? "" : "none";
+            });
+        }
+    </script>
+</body>
+</html>

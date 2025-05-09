@@ -1,0 +1,26 @@
+{
+  "id": "capsule_2025-05-02_15-35-03",
+  "timestamp": "2025-05-02_15-35-03",
+  "topic": "general",
+  "subtopics": [],
+  "user_input": " \u0e27\u0e31\u0e19\u0e19\u0e35\u0e49\u0e09\u0e31\u0e19\u0e23\u0e39\u0e49\u0e2a\u0e36\u0e01\u0e41\u0e22\u0e48\u0e21\u0e32\u0e01 \u0e40\u0e2b\u0e19\u0e37\u0e48\u0e2d\u0e22\u0e01\u0e31\u0e1a\u0e17\u0e38\u0e01\u0e2d\u0e22\u0e48\u0e32\u0e07",
+  "betty_response": "I understand what you're saying. That makes sense. How do you feel about this situation?",
+  "emotion": {
+    "emotion": "neutral",
+    "intensity": 0.5
+  },
+  "tags": [
+    "neutral"
+  ],
+  "lessons": [
+    {
+      "context": "user emotion detection",
+      "pattern": "When user expresses neutral, respond with empathy",
+      "importance": 0.5
+    }
+  ],
+  "insights": [
+    "User expressed neutral about general topic"
+  ],
+  "related_memories": []
+}

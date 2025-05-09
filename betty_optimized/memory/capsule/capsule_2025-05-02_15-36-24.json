@@ -1,0 +1,30 @@
+{
+  "id": "capsule_2025-05-02_15-36-24",
+  "timestamp": "2025-05-02_15-36-24",
+  "topic": "speak",
+  "subtopics": [
+    "thai"
+  ],
+  "user_input": "can you speak thai",
+  "betty_response": "Tell me more about that. I see what you mean.",
+  "emotion": {
+    "emotion": "neutral",
+    "intensity": 0.5
+  },
+  "tags": [
+    "speak",
+    "thai",
+    "neutral"
+  ],
+  "lessons": [
+    {
+      "context": "user emotion detection",
+      "pattern": "When user expresses neutral, respond with empathy",
+      "importance": 0.5
+    }
+  ],
+  "insights": [
+    "User expressed neutral about speak"
+  ],
+  "related_memories": []
+}

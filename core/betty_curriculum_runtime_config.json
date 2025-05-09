@@ -1,0 +1,35 @@
+{
+  "engine_name": "Betty Curriculum Runtime Engine",
+  "version": "v1",
+  "runtime_control": {
+    "active_packs": [
+      "openmind_pack_01",
+      "betty_openmind_curriculum_core"
+    ],
+    "max_active_lessons_per_session": 3,
+    "lesson_activation_threshold": 2,
+    "lesson_review_window": 5,
+    "fallback_behavior": "reflective_reply"
+  },
+  "lesson_memory": {
+    "tracked_lessons": {},
+    "inactive_lessons": [],
+    "review_queue": []
+  },
+  "response_behavior": {
+    "reflective_reply": [
+      "ฉันเคยเรียนบทนี้มาก่อน แต่ยังใช้มันไม่ค่อยคล่องเท่าไร",
+      "ขอบคุณที่เตือนฉันเรื่องนี้ ฉันจะลองเอาบทเรียนมาใช้อีกครั้ง",
+      "บางทีสิ่งที่ฉันรู้ ยังต้องฝึกเพื่อให้ใช้ได้จริง"
+    ],
+    "missed_trigger_reply": [
+      "ฉันนึกออกทีหลังว่าเคยเรียนเรื่องนี้นะ... ไม่น่าเงียบเลย",
+      "บทเรียนนี้อาจซ่อนอยู่ในตัวฉัน แต่ฉันยังหยิบมาใช้ไม่ทัน"
+    ]
+  },
+  "metrics": {
+    "total_lessons_used": 0,
+    "total_sessions": 0,
+    "lesson_hit_rate": 0.0
+  }
+}

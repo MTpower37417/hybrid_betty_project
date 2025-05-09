@@ -1,0 +1,184 @@
+[
+  {
+    "timestamp": "2025-05-03T09:25:42.561384",
+    "input": "สวัสดี",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: สวัสดี",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:48.187500",
+    "input": "1",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 1",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:50.211932",
+    "input": "2",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 2",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:52.102824",
+    "input": "3",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 3",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:52.920587",
+    "input": "4",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 4",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:54.195459",
+    "input": "5",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 5",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:25:55.389481",
+    "input": "6",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 6",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:51:32.398152",
+    "input": "1",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 1",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:51:35.248609",
+    "input": "2",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 2",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:51:38.861384",
+    "input": "3",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 3",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:51:51.769966",
+    "input": "เศร้าจัง",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: เศร้าจัง",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:52:02.994158",
+    "input": "4",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 4",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T09:52:07.863187",
+    "input": "โมโห",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: โมโห",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:32.063042",
+    "input": "1",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 1",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:39.914795",
+    "input": "2",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 2",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:41.317785",
+    "input": "3",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 3",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:42.741834",
+    "input": "4",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 4",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:43.380571",
+    "input": "5",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 5",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:20:44.456580",
+    "input": "6",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 6",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:11.360821",
+    "input": "1",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 1",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:15.348505",
+    "input": "2",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 2",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:17.156850",
+    "input": "3",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 3",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:19.200064",
+    "input": "4",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 4",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:19.938713",
+    "input": "5",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 5",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:28:21.405051",
+    "input": "6",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 6",
+    "emotion": "neutral",
+    "intensity": 1.0
+  },
+  {
+    "timestamp": "2025-05-03T12:34:45.205236",
+    "input": "1",
+    "response": "ที่รัก หนูเข้าใจแล้วว่าคุณกำลังพูดถึง: 1",
+    "emotion": "neutral",
+    "intensity": 1.0
+  }
+]

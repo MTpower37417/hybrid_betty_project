@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Betty GPT Debug UI</title>
+    <style>
+        body { background: #121212; color: #eee; font-family: sans-serif; padding: 20px; }
+        #chatbox { border: 1px solid #444; padding: 10px; height: 350px; overflow-y: scroll; background: #1e1e1e; }
+        .user { color: #6cf; margin-top: 10px; }
+        .bot { color: #fc6; margin-top: 5px; }
+        input { width: 70%; padding: 8px; }
+        button { padding: 8px; }
+    </style>
+</head>
+<body>
+    <h2>Betty GPT Chat</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="พิมพ์ข้อความ..." />
+    <button onclick="send()">ส่ง</button>
+
+    <script>
+        function send() {
+            const input = document.getElementById("userInput");
+            const msg = input.value.trim();
+            input.value = "";
+            const chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += "<div class='user'>คุณ: " + msg + "</div>";
+
+            fetch("/api/chat", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({message: msg})
+            })
+            .then(res => res.json())
+            .then(data => {
+                let responseText = data.response || "ไม่มีคำตอบ";
+                chatbox.innerHTML += "<div class='bot'>Betty: " + responseText + "<br><small>อารมณ์: " + data.emotion + " | รูปแบบ: " + data.pattern + "</small></div>";
+                chatbox.scrollTop = chatbox.scrollHeight;
+            })
+            .catch(err => {
+                chatbox.innerHTML += "<div class='bot'>[ERROR] ไม่สามารถเชื่อมต่อ GPT ได้</div>";
+                console.error(err);
+            });
+        }
+    </script>
+</body>
+</html>

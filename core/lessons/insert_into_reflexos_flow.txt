@@ -1,0 +1,30 @@
+
+# ===== BEGIN: Betty Curriculum Integration =====
+from lesson_manager import LessonManager
+
+class ReflexosServer:
+    def __init__(self):
+        ...
+        self.lesson_manager = LessonManager(lesson_folder="./lessons")
+        ...
+
+    def chat(self):
+        user_input = request.json.get("message")
+        ...
+
+        # 🔍 STEP: Try lesson-based response before fallback
+        lesson_response = self.lesson_manager.get_response(user_input)
+        if lesson_response:
+            return jsonify({
+                "response": lesson_response,
+                "source": "lesson"
+            })
+
+        # 🔁 Continue normal response generation if no lesson matched
+        final_response = self.generate_response(user_input)
+        ...
+        return jsonify({
+            "response": final_response,
+            "source": "core"
+        })
+# ===== END: Betty Curriculum Integration =====

@@ -1,0 +1,69 @@
+.
+ |  ReflexOS
+ |   |  .git
+ |   |  Bedroom_Betty
+ |   |   |  cache
+ |   |   |  logs
+ |   |  Companion_Engine
+ |   |   |  __pycache__
+ |   |  FanvueAPI
+ |   |   |  __pycache__
+ |   |  FlirtAI
+ |   |   |  __pycache__
+ |   |  Jarvis_Lab
+ |   |   |  logs
+ |   |  Office_Room
+ |   |   |  cache
+ |   |   |  capsule
+ |   |   |  logs
+ |   |   |  profile
+ |   |  Persona_Assets
+ |   |  ReflexSystem
+ |   |   |  cloud_loader
+ |   |   |  logs
+ |   |   |  memory
+ |   |   |   |  core_directive
+ |   |   |  profile
+ |   |  ReflexSystem_Fusion
+ |   |  ReflexSystem_Sync
+ |   |   |  betty
+ |   |   |  jarvis
+ |   |   |  office
+ |   |  Revenue_Engine
+ |   |   |  __pycache__
+ |   |  __pycache__
+ |   |  backups
+ |   |  bedroom
+ |   |   |  capsule
+ |   |   |  persona
+ |   |   |  triggers
+ |   |  betty_dialogue_memory
+ |   |  betty_emotion_logs
+ |   |  betty_journals
+ |   |  betty_safe_capsule
+ |   |  core
+ |   |   |  Bedroom_Betty
+ |   |   |   |  cache
+ |   |  imports
+ |   |  logs
+ |   |   |  logs
+ |   |  memory
+ |   |   |  bedroom
+ |   |   |   |  chat_capsules
+ |   |   |  core_directive
+ |   |   |  index
+ |   |  memory_capsule
+ |   |  pattern
+ |   |  snapshots
+ |   |  tools
+ |  __pycache__
+ |  core
+ |   |  memory
+ |   |   |  imported_logs
+ |  memory
+ |   |  emotion
+ |   |  extended
+ |   |  imported_logs
+ |   |  longterm
+ |   |  stack
+ |  templates

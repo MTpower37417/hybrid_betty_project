@@ -1,0 +1,28 @@
+hybrid_betty_project/
+├── core/                           # โค้ดหลักของระบบ
+│   ├── betty/                      # โมดูลหลักของ Betty
+│   │   ├── memory/                 # การจัดการ memory
+│   │   ├── persona/                # การจัดการ persona
+│   │   ├── emotion/                # การจัดการ emotion
+│   │   ├── server/                 # เซิร์ฟเวอร์หลัก
+│   │   └── utils/                  # Utility functions
+│   ├── reflexos/                   # ReflexOS modules
+│   │   ├── memory/                 # Memory modules
+│   │   ├── emotion/                # Emotion modules
+│   │   └── integration/            # Integration modules
+│   └── __init__.py                 # ทำให้ core เป็น Python package
+├── data/                           # ข้อมูลที่ใช้ในระบบ
+│   ├── logs/                       # Logs
+│   ├── memory/                     # Memory data
+│   └── profiles/                   # Persona profiles
+├── tests/                          # Unit tests และ integration tests
+│   ├── test_betty.py               # ทดสอบโมดูล Betty
+│   ├── test_reflexos.py            # ทดสอบ ReflexOS
+│   └── __init__.py                 # ทำให้ tests เป็น Python package
+├── docs/                           # เอกสารประกอบโปรเจกต์
+│   ├── README.md                   # คำอธิบายโปรเจกต์
+│   ├── setup_guide.md              # วิธีการติดตั้งและรันระบบ
+│   └── developer_guide.md          # คู่มือสำหรับนักพัฒนา
+├── requirements.txt                # Dependencies ของโปรเจกต์
+├── .gitignore                      # ไฟล์ที่ไม่ต้องการให้ Git ติดตาม
+└── README.md                       # คำอธิบายโปรเจกต์โดยรวม

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Betty Dark Mode</title>
+    <style>
+        body.dark {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark input, body.dark button {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            border: 1px solid #444;
+        }
+        .toggle-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>คุยกับเบตตี้</h1>
+
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="พิมพ์ข้อความ..." required>
+        <button type="submit">ส่ง</button>
+        <button type="button" onclick="toggleDarkMode()" class="toggle-button">🌙 โหมดกลางคืน</button>
+    </form>
+
+    <div id="response" style="margin-top: 20px;"></div>
+
+    <hr>
+    <h3>บทสนทนาย้อนหลัง</h3>
+    <div id="history">
+        {% for item in history %}
+            <div class="entry">
+                <small>{{ item.time }}</small>
+                <p><b>คุณ:</b> {{ item.user }}<br><b>เบตตี้:</b> {{ item.betty }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark");
+        }
+
+        document.getElementById("chat-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const message = document.getElementById("message").value;
+            const res = await fetch("/input", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message })
+            });
+            const data = await res.json();
+            document.getElementById("response").innerText = data.response || data.error;
+            setTimeout(() => location.reload(), 1000);
+        });
+    </script>
+</body>
+</html>

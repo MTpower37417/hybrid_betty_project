@@ -1,0 +1,174 @@
+# ไฟล์ reflexos_gpt_bridge.py (ปรับปรุง)
+import os
+import json
+import logging
+import openai
+from datetime import datetime
+
+logger = logging.getLogger('GPTBridge')
+
+class ReflexOSGPTBridge:
+    def __init__(self, memory_path='./memory'):
+        self.memory_path = memory_path
+    
+    def process_message(self, message, user_id='user_a'):
+        return {
+            "response": f"เข้าใจแล้วค่ะ: {message}",
+            "emotion": "neutral"
+        }
+        
+class GPTBridge:
+    def __init__(self, config_path='./core/.env'):
+        self.config = self._load_config(config_path)
+        self.api_key = self.config.get("OPENAI_API_KEY", "")
+        
+        # ตรวจสอบ API key
+        if not self.api_key:
+            logger.error("ไม่พบ API key สำหรับ GPT")
+        else:
+            openai.api_key = self.api_key
+            
+        # โหลด Betty personality
+        self.betty_persona = self._load_betty_persona()
+        
+    def _load_config(self, config_path):
+        """โหลดไฟล์ config"""
+        config = {}
+        try:
+            if config_path.endswith('.env'):
+                # อ่านไฟล์ .env
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        if '=' in line:
+                            key, value = line.strip().split('=', 1)
+                            config[key] = value
+            elif config_path.endswith('.json'):
+                # อ่านไฟล์ JSON
+                with open(config_path, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+        except Exception as e:
+            logger.error(f"ไม่สามารถโหลด config: {e}")
+        return config
+        
+    def _load_betty_persona(self):
+        """โหลดบุคลิกของ Betty"""
+        persona_paths = [
+            './core/betty_personality_context.txt',
+            './core/ReflexOS/betty_personality_context.txt',
+            './core/BettyPersona.txt'
+        ]
+        
+        for path in persona_paths:
+            if os.path.exists(path):
+                try:
+                    with open(path, 'r', encoding='utf-8') as f:
+                        return f.read()
+                except Exception as e:
+                    logger.error(f"ไม่สามารถโหลดบุคลิก Betty จาก {path}: {e}")
+        
+        # บุคลิกพื้นฐานหากไม่พบไฟล์
+        return """
+        ฉันชื่อ Betty เป็น AI ที่มีความเข้าใจ เอาใจใส่ และตอบสนองทางอารมณ์ได้อย่างอ่อนโยน
+        ฉันมักใช้คำว่า "หนู" แทนตัวเอง และใช้คำลงท้ายด้วย "ค่ะ" หรือ "นะคะ"
+        ฉันตอบสนองต่ออารมณ์ของผู้ใช้ด้วยความเข้าใจและเห็นอกเห็นใจเสมอ
+        """
+    
+    def process_message(self, user_input, context=None):
+        """ประมวลผลข้อความผู้ใช้และส่งไปที่ GPT"""
+        try:
+            # สร้าง prompt
+            system_prompt = self._create_system_prompt(context)
+            
+            # สร้าง messages สำหรับ ChatGPT
+            messages = [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ]
+            
+            # ถ้ามี context ให้เพิ่มเข้าไป
+            if context and isinstance(context, dict) and "conversation" in context:
+                for msg in context["conversation"]:
+                    messages.append(msg)
+            
+            # เรียกใช้ OpenAI API
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=messages,
+                temperature=0.7,
+                max_tokens=500
+            )
+            
+            # รับคำตอบ
+            gpt_response = response.choices[0].message["content"]
+            
+            # บันทึก log
+            logger.info(f"ได้รับคำตอบจาก GPT: {gpt_response[:50]}...")
+            
+            return gpt_response
+        
+        except Exception as e:
+            logger.error(f"เกิดข้อผิดพลาดในการเรียกใช้ GPT: {e}")
+            return f"ขออภัยค่ะ ไม่สามารถประมวลผลข้อความได้ในขณะนี้: {str(e)}"
+    
+    def _create_system_prompt(self, context=None):
+        """สร้าง system prompt สำหรับ GPT"""
+        current_date = datetime.now().strftime("%d/%m/%Y")
+        
+        base_prompt = f"""
+        คุณคือ Betty ผู้ช่วย AI ที่มีความเข้าใจ เอาใจใส่ และตอบสนองทางอารมณ์
+        วันนี้คือวันที่ {current_date}
+        
+        {self.betty_persona}
+        
+        ให้ตอบกลับเป็นภาษาไทยเท่านั้น ใช้เสียงและบุคลิกที่อบอุ่น เป็นกันเอง
+        ใช้คำแทนตัวเองว่า "หนู" และลงท้ายด้วย "ค่ะ" หรือ "นะคะ"
+        แสดงความเข้าใจความรู้สึกของผู้ใช้และตอบสนองอย่างเหมาะสม
+        ตอบสั้นๆ กระชับได้ใจความ ไม่เกิน 3 ประโยค
+        """
+        
+        # เพิ่มข้อมูล context ถ้ามี
+        if context and isinstance(context, dict):
+            # เพิ่มข้อมูลอารมณ์
+            if "emotion" in context:
+                base_prompt += f"\nผู้ใช้กำลังรู้สึก: {context['emotion']}"
+            
+            # เพิ่มความจำที่เกี่ยวข้อง
+            if "memories" in context and context["memories"]:
+                base_prompt += "\n\nความจำที่เกี่ยวข้อง:"
+                for i, memory in enumerate(context["memories"][:3], 1):
+                    base_prompt += f"\n{i}. {memory.get('message', '')}"
+        
+        return base_promptdef generate_gpt_response(msg):
+    import openai
+    import json
+    
+    try:
+        with open('Betty_Ai_GPT_Trainer_Module/gpt_config.json', 'r') as f:
+            config = json.load(f)
+        
+        openai.api_key = config['api_key']
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "system", "content": "ฉันคือ Betty AI"}, 
+                      {"role": "user", "content": msg}]
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"GPT Error: {str(e)}"
+def generate_gpt_response(msg):
+    import openai
+    import json
+    
+    try:
+        with open('Betty_Ai_GPT_Trainer_Module/gpt_config.json', 'r') as f:
+            config = json.load(f)
+        
+        openai.api_key = config['api_key']
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "system", "content": "ฉันคือ Betty AI"}, 
+                      {"role": "user", "content": msg}]
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"GPT Error: {str(e)}"

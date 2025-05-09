@@ -1,0 +1,27 @@
+{
+  "id": "capsule_2025-05-02_15-35-42",
+  "timestamp": "2025-05-02_15-35-42",
+  "topic": "\u0e14\u0e44\u0e44\u0e17\u0e22\u0e44\u0e14",
+  "subtopics": [],
+  "user_input": "\u0e1e\u0e1e\u0e39\u0e14\u0e44\u0e44\u0e17\u0e22\u0e44\u0e14\u0e49\u0e21\u0e31\u0e49\u0e22",
+  "betty_response": "I understand what you're saying. I understand. Is there a specific aspect you'd like to focus on?",
+  "emotion": {
+    "emotion": "neutral",
+    "intensity": 0.5
+  },
+  "tags": [
+    "\u0e14\u0e44\u0e44\u0e17\u0e22\u0e44\u0e14",
+    "neutral"
+  ],
+  "lessons": [
+    {
+      "context": "user emotion detection",
+      "pattern": "When user expresses neutral, respond with empathy",
+      "importance": 0.5
+    }
+  ],
+  "insights": [
+    "User expressed neutral about \u0e14\u0e44\u0e44\u0e17\u0e22\u0e44\u0e14"
+  ],
+  "related_memories": []
+}

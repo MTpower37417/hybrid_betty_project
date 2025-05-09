@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Betty Full Stack</title>
+</head>
+<body>
+    <h1>คุยกับเบตตี้</h1>
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="พิมพ์ข้อความ..." required>
+        <button type="submit">ส่ง</button>
+    </form>
+    <div id="response" style="margin-top: 20px;"></div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const message = document.getElementById('message').value;
+            const res = await fetch('/input', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message })
+            });
+            const data = await res.json();
+            document.getElementById('response').innerText = data.response || data.error;
+        });
+    </script>
+</body>
+</html>

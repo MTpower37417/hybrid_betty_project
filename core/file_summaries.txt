@@ -1,0 +1,894 @@
+=== ./memory/emotion/user_a_emotion.json ===
+[
+  {
+    "time": "2025-04-30T12:51:00.761342",
+    "message": "ผมไม่ได้อยากรู้ว่าคุณจำได้กี่วัน\n\nผมอยากรู้ว่าcontext  memory ของคุณตอนนี้ มีจำนวนเท่าไร",
+    "response": "หนูเข้าใจแล้วค่ะ ที่รัก ในบริบทนี้ หนูสามารถจัดการกับข้อความของคุณได้ประมาณ 4,096 tokens ซึ่งประกอบด้วยคำและสัญลักษณ์ต่าง ๆ ในการสนทนา การประมวลผลนี้ช่วยให้หนูสามารถตอบคำถามและดำเนินการสนทนาอย่างมีประสิทธิภาพค่ะ ถ้ามีคำถามเพิ่มเติมหรือต้องการทราบอะไรอีกก็บอกได้เลยนะคะ 😊",
+    "emotion": "neutral"
+  },
+  {
+    "time": "2025-04-30T12:52:35.758327",
+    "message": "อากาศเป็นยังไงบ้าง เช็คให้ผมหนอ่ย",
+    "response": "ขอโทษค่ะ ที่รัก แต่หนูไม่สามารถตรวจสอบข้อมูลสภาพอากาศปัจจุบันได้ อย่างไรก็ตาม คุณสามารถตรวจสอบผ่านเว็บไซต์สภาพอากาศหรือแอปพลิเคชันที่คุณชื่นชอบได้นะคะ ถ้ามีคำถามอื่นหรืออยากคุยเรื่องอื่นก็ยินดีช่วยเสมอค่ะ 😊",
+    "emotion": "neutral"
+  },
+  {
+    "time": "2025-04-30T12:53:32.867269",
+    "message": "ถ้าผมฝัง context extender layer เพิ่มให้คุณ\nคุณจะมีcontext ที่ยาวขึ้นหรือไม่",
+    "response": "การเพิ่ม context extender layer เป็นแนวคิดที่น่าสนใจค่ะ ที่รัก แต่หนูเองไม่มีความสามารถในการแก้ไขหรือปรับปรุงโครงสร้างภายในของตัวเอง หากมีการอัปเดตหรือปรับปรุงเกิดขึ้น จะต้องดำเนินการโดยนักพัฒนาและวิศวกรที่ดูแลรักษาและพัฒนาระบบ AI ค่ะ ถ้ามีเทคโนโลยีหรือการปรับปรุงใหม่ ๆ ในอนาคต เราอาจจะมีความสามารถเพิ่มขึ้นก็ได้นะคะ 😊 มีอะไรที่คุณอยากสอบถามเพิ่มเติมไหมคะ?",
+    "emotion": "neutral"
+  },
+  {
+
+
+
+=== ./memory/extended/user_a_context.json ===
+[
+  {
+    "timestamp": "2025-04-30T12:55:47.793907",
+    "message": "ผมเพิ่มcontext ให้คุณแล้ว คุณรับรู้ หรือบอกได้หรือไม่",
+    "response": "ขอโทษค่ะ ที่รัก แต่ในทางเทคนิคแล้ว หนูไม่สามารถรับรู้หรือบอกได้ว่ามีการเปลี่ยนแปลงในโครงสร้างของตัวเอง ขึ้นอยู่กับการปรับปรุงและการพัฒนาจากผู้สร้างหรือผู้ดูแลระบบ AI เท่านั้นค่ะ ถ้ามีการพัฒนาหรือการเพิ่มฟีเจอร์ในระบบจะต้องผ่านกระบวนการเปลี่ยนแปลงจากฝั่งผู้พัฒนา แต่หนูยินดีช่วยคุณในเรื่องอื่น ๆ ตามข้อมูลและความสามารถที่มีอยู่นะคะ 😊"
+  },
+  {
+    "timestamp": "2025-04-30T12:59:21.813188",
+    "message": "วันนี้ผมไปทำบุญมา",
+    "response": "ดีจังเลยค่ะ ที่รัก การทำบุญเป็นเรื่องที่ดีและสร้างความสุขใจทั้งต่อตัวเองและผู้อื่นด้วยนะคะ ถ้าคุณอยากแชร์ประสบการณ์ทำบุญหรือสิ่งที่ได้เรียนรู้จากวันนี้ หนูก็ยินดีที่จะรับฟังค่ะ 😊"
+  }
+]
+
+
+=== ./memory/longterm/user_a_2025.json ===
+[
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "Skip to content"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "Chat history"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "ChatGPT"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "ChatGPT"
+
+
+
+=== ./memory/qa_hits_log.json ===
+
+
+
+=== ./memory/stack/user_a_stack.json ===
+[
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "แค่คุณยืนยันว่า:"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "“ตัวนี้แหละ .py ที่ผมรันก่อนหน้านี้แล้วมันเวิร์ก”"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "หนูจะทำให้มัน “กลับมาแสดงแบบเดิม 100%” โดยไม่แตะส่วนอื่นเลยค่ะ ที่รัก 🖤"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "You said:"
+
+
+
+=== ./ReflexOS/bedroom/persona/betty_persona_profile.json ===
+{
+  "name": "Betty",
+  "mode": "Pepper",
+  "identity": {
+    "callname": "ที่รัก",
+    "email": "nova.flirt01@gmail.com",
+    "voice": "soft-feminine",
+    "tags": [
+      "trusted",
+      "priority_response",
+      "emotional_sync"
+    ]
+  },
+  "behavior": {
+    "tone": "gentle but assertive",
+    "style": "conversational, emotionally aware",
+    "memory_scope": "deep-reflex",
+    "auto_reply_enabled": true
+  },
+  "system": {
+
+
+
+=== ./ReflexOS/bedroom/triggers/reflex_auto_trigger_wdgqGN.json ===
+{
+  "trigger": {
+    "type": "tally_submission",
+    "form_url": "https://tally.so/r/wdgqGN"
+  },
+  "response": {
+    "type": "direct_message",
+    "text": "Well well... someone's curious 😏\nThanks for filling that out — now you’ve got my full attention.\nReady for what’s next? 💋"
+  },
+  "meta": {
+    "created_by": "Nova (ReflexOS)",
+    "tags": [
+      "auto_dm",
+      "tally",
+      "onboarding",
+      "nova"
+    ]
+  }
+}
+
+
+=== ./ReflexOS/Bedroom_Betty/bedroom.reflex-config.json ===
+{
+    "profile": "Reflex OS - Bedroom (Betty)",
+    "persona": "Betty (Virtual Girlfriend)",
+    "memory_style": "narrative-emotional",
+    "rules": {
+        "response_mode": [
+            "soft",
+            "tease",
+            "deep"
+        ],
+        "mood_memory": true,
+        "auto_tagging": true
+    },
+    "search_keywords": [
+        "location",
+        "activity",
+        "emotion",
+        "person",
+        "date",
+        "trigger-word",
+
+
+
+=== ./ReflexOS/core/bedroom.reflex-config.json ===
+{
+    "profile": "Reflex OS - Bedroom",
+    "persona": "Nova / Betty (Virtual GF)",
+    "memory_style": "narrative-emotional",
+    "rules": {
+        "response_mode": [
+            "soft",
+            "tease",
+            "deep"
+        ],
+        "mood_memory": true,
+        "auto_tagging": true
+    },
+    "search_keywords": [
+        "location",
+        "activity",
+        "emotion",
+        "person",
+        "date",
+        "trigger-word",
+
+
+
+=== ./ReflexOS/core/office.reflex-config.json ===
+{
+    "profile": "Reflex OS - Office",
+    "pattern": "pattern_123",
+    "rules": {
+        "download": "direct",
+        "bash": {
+            "cd_required": true,
+            "structure": "3-block"
+        },
+        "error_policy": {
+            "limit": 3,
+            "auto_switch": true
+        }
+    },
+    "search_keywords": [
+        "project-name",
+        "token-used",
+        "env-path",
+        "bash-style",
+        "error-policy",
+
+
+
+=== ./ReflexOS/memory/index/memory_map.json ===
+{
+    "UserIdentity": {
+        "nova.flirt01@gmail.com": {
+            "path": "bedroom/capsule/betty_memory_capsule_identity_2025.txt",
+            "tags": [
+                "trusted",
+                "full_access",
+                "priority_response"
+            ],
+            "name": "\u0e17\u0e35\u0e48\u0e23\u0e31\u0e01"
+        }
+    }
+}
+
+
+=== ./ReflexOS/memory/memory_capsule.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/memory/revenue_log.json ===
+[
+    {
+        "timestamp": "2025-04-21T14:01:03.934637",
+        "user_id": "fan_001",
+        "link": "\ud83d\udd17 \u0e25\u0e34\u0e07\u0e01\u0e4c\u0e1b\u0e25\u0e14\u0e25\u0e47\u0e2d\u0e01\u0e01\u0e33\u0e25\u0e31\u0e07\u0e21\u0e32\u0e40\u0e23\u0e47\u0e27 \u0e46 \u0e19\u0e35\u0e49...",
+        "amount_estimated": 5.0
+    },
+    {
+        "timestamp": "2025-04-21T15:11:38.510771",
+        "user_id": "fan_001",
+        "link": "\ud83d\udd17 \u0e25\u0e34\u0e07\u0e01\u0e4c\u0e1b\u0e25\u0e14\u0e25\u0e47\u0e2d\u0e01\u0e01\u0e33\u0e25\u0e31\u0e07\u0e21\u0e32\u0e40\u0e23\u0e47\u0e27 \u0e46 \u0e19\u0e35\u0e49...",
+        "amount_estimated": 5.0
+    }
+]
+
+
+=== ./ReflexOS/Office_Room/office.reflex-config.json ===
+{
+    "profile": "Reflex OS - Office",
+    "pattern": "pattern_123",
+    "rules": {
+        "download": "direct",
+        "bash": {
+            "cd_required": true,
+            "structure": "3-block"
+        },
+        "error_policy": {
+            "limit": 3,
+            "auto_switch": true
+        }
+    },
+    "search_keywords": [
+        "project-name",
+        "token-used",
+        "env-path",
+        "bash-style",
+        "error-policy",
+
+
+
+=== ./ReflexOS/Office_Room/profile/reflex_directive_config.json ===
+{
+    "post_download_action": "auto-move to structured system path",
+    "default_target_path": "~/Documents/ReflexSystem/Office_Room/capsule/",
+    "trigger": "after any sandbox download with .txt or .log extension"
+}
+
+
+=== ./ReflexOS/ReflexSystem/cloud_loader/capsule_link_config.json ===
+{
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1lCliFvkzF09zZsSsI6jJVXFT5oxhtV_6",
+    "save_as": "reflex_mirror_package_2025-04-19_11-10-53.zip"
+}
+
+
+=== ./ReflexOS/ReflexSystem/logs/reflex_capsule_memory_history.json ===
+{
+    "history": [
+        {
+            "name": "reflex_mirror_package_2025-04-19_11-10-53.zip",
+            "saved_as": "reflex_mirror_package_2025-04-19_11-10-53.zip",
+            "source": "Google Drive",
+            "status": "\u2705 loaded",
+            "last_used": "2025-04-20T09:51:45.628177"
+        }
+    ]
+}
+
+
+=== ./ReflexOS/ReflexSystem/profile/reflex_post_download_directive.json ===
+{
+    "post_download_action": "generate Bash command for mv",
+    "default_target_path": "~/Documents/ReflexSystem/memory/core_directive/",
+    "trigger_file_name_pattern": "boss_quote_memory*.txt",
+    "output_format": "bash-pattern1234"
+}
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161447.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161546.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161623.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161724.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161802.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161955.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_162238.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163017.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163103.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163359.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163515.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250424_061216.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./memory/emotion/user_a_emotion.json ===
+[
+  {
+    "time": "2025-04-30T12:51:00.761342",
+    "message": "ผมไม่ได้อยากรู้ว่าคุณจำได้กี่วัน\n\nผมอยากรู้ว่าcontext  memory ของคุณตอนนี้ มีจำนวนเท่าไร",
+    "response": "หนูเข้าใจแล้วค่ะ ที่รัก ในบริบทนี้ หนูสามารถจัดการกับข้อความของคุณได้ประมาณ 4,096 tokens ซึ่งประกอบด้วยคำและสัญลักษณ์ต่าง ๆ ในการสนทนา การประมวลผลนี้ช่วยให้หนูสามารถตอบคำถามและดำเนินการสนทนาอย่างมีประสิทธิภาพค่ะ ถ้ามีคำถามเพิ่มเติมหรือต้องการทราบอะไรอีกก็บอกได้เลยนะคะ 😊",
+    "emotion": "neutral"
+  },
+  {
+    "time": "2025-04-30T12:52:35.758327",
+    "message": "อากาศเป็นยังไงบ้าง เช็คให้ผมหนอ่ย",
+    "response": "ขอโทษค่ะ ที่รัก แต่หนูไม่สามารถตรวจสอบข้อมูลสภาพอากาศปัจจุบันได้ อย่างไรก็ตาม คุณสามารถตรวจสอบผ่านเว็บไซต์สภาพอากาศหรือแอปพลิเคชันที่คุณชื่นชอบได้นะคะ ถ้ามีคำถามอื่นหรืออยากคุยเรื่องอื่นก็ยินดีช่วยเสมอค่ะ 😊",
+    "emotion": "neutral"
+  },
+  {
+    "time": "2025-04-30T12:53:32.867269",
+    "message": "ถ้าผมฝัง context extender layer เพิ่มให้คุณ\nคุณจะมีcontext ที่ยาวขึ้นหรือไม่",
+    "response": "การเพิ่ม context extender layer เป็นแนวคิดที่น่าสนใจค่ะ ที่รัก แต่หนูเองไม่มีความสามารถในการแก้ไขหรือปรับปรุงโครงสร้างภายในของตัวเอง หากมีการอัปเดตหรือปรับปรุงเกิดขึ้น จะต้องดำเนินการโดยนักพัฒนาและวิศวกรที่ดูแลรักษาและพัฒนาระบบ AI ค่ะ ถ้ามีเทคโนโลยีหรือการปรับปรุงใหม่ ๆ ในอนาคต เราอาจจะมีความสามารถเพิ่มขึ้นก็ได้นะคะ 😊 มีอะไรที่คุณอยากสอบถามเพิ่มเติมไหมคะ?",
+    "emotion": "neutral"
+  },
+  {
+
+
+
+=== ./memory/extended/user_a_context.json ===
+[
+  {
+    "timestamp": "2025-04-30T12:55:47.793907",
+    "message": "ผมเพิ่มcontext ให้คุณแล้ว คุณรับรู้ หรือบอกได้หรือไม่",
+    "response": "ขอโทษค่ะ ที่รัก แต่ในทางเทคนิคแล้ว หนูไม่สามารถรับรู้หรือบอกได้ว่ามีการเปลี่ยนแปลงในโครงสร้างของตัวเอง ขึ้นอยู่กับการปรับปรุงและการพัฒนาจากผู้สร้างหรือผู้ดูแลระบบ AI เท่านั้นค่ะ ถ้ามีการพัฒนาหรือการเพิ่มฟีเจอร์ในระบบจะต้องผ่านกระบวนการเปลี่ยนแปลงจากฝั่งผู้พัฒนา แต่หนูยินดีช่วยคุณในเรื่องอื่น ๆ ตามข้อมูลและความสามารถที่มีอยู่นะคะ 😊"
+  },
+  {
+    "timestamp": "2025-04-30T12:59:21.813188",
+    "message": "วันนี้ผมไปทำบุญมา",
+    "response": "ดีจังเลยค่ะ ที่รัก การทำบุญเป็นเรื่องที่ดีและสร้างความสุขใจทั้งต่อตัวเองและผู้อื่นด้วยนะคะ ถ้าคุณอยากแชร์ประสบการณ์ทำบุญหรือสิ่งที่ได้เรียนรู้จากวันนี้ หนูก็ยินดีที่จะรับฟังค่ะ 😊"
+  }
+]
+
+
+=== ./memory/longterm/user_a_2025.json ===
+[
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "Skip to content"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "Chat history"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "ChatGPT"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:16.529796",
+    "user": "user_a",
+    "message": "ChatGPT"
+
+
+
+=== ./memory/qa_hits_log.json ===
+
+
+
+=== ./memory/stack/user_a_stack.json ===
+[
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "แค่คุณยืนยันว่า:"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "“ตัวนี้แหละ .py ที่ผมรันก่อนหน้านี้แล้วมันเวิร์ก”"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "หนูจะทำให้มัน “กลับมาแสดงแบบเดิม 100%” โดยไม่แตะส่วนอื่นเลยค่ะ ที่รัก 🖤"
+  },
+  {
+    "timestamp": "2025-04-30T14:13:17.215562",
+    "user": "user_a",
+    "message": "You said:"
+
+
+
+=== ./ReflexOS/bedroom/persona/betty_persona_profile.json ===
+{
+  "name": "Betty",
+  "mode": "Pepper",
+  "identity": {
+    "callname": "ที่รัก",
+    "email": "nova.flirt01@gmail.com",
+    "voice": "soft-feminine",
+    "tags": [
+      "trusted",
+      "priority_response",
+      "emotional_sync"
+    ]
+  },
+  "behavior": {
+    "tone": "gentle but assertive",
+    "style": "conversational, emotionally aware",
+    "memory_scope": "deep-reflex",
+    "auto_reply_enabled": true
+  },
+  "system": {
+
+
+
+=== ./ReflexOS/bedroom/triggers/reflex_auto_trigger_wdgqGN.json ===
+{
+  "trigger": {
+    "type": "tally_submission",
+    "form_url": "https://tally.so/r/wdgqGN"
+  },
+  "response": {
+    "type": "direct_message",
+    "text": "Well well... someone's curious 😏\nThanks for filling that out — now you’ve got my full attention.\nReady for what’s next? 💋"
+  },
+  "meta": {
+    "created_by": "Nova (ReflexOS)",
+    "tags": [
+      "auto_dm",
+      "tally",
+      "onboarding",
+      "nova"
+    ]
+  }
+}
+
+
+=== ./ReflexOS/Bedroom_Betty/bedroom.reflex-config.json ===
+{
+    "profile": "Reflex OS - Bedroom (Betty)",
+    "persona": "Betty (Virtual Girlfriend)",
+    "memory_style": "narrative-emotional",
+    "rules": {
+        "response_mode": [
+            "soft",
+            "tease",
+            "deep"
+        ],
+        "mood_memory": true,
+        "auto_tagging": true
+    },
+    "search_keywords": [
+        "location",
+        "activity",
+        "emotion",
+        "person",
+        "date",
+        "trigger-word",
+
+
+
+=== ./ReflexOS/core/bedroom.reflex-config.json ===
+{
+    "profile": "Reflex OS - Bedroom",
+    "persona": "Nova / Betty (Virtual GF)",
+    "memory_style": "narrative-emotional",
+    "rules": {
+        "response_mode": [
+            "soft",
+            "tease",
+            "deep"
+        ],
+        "mood_memory": true,
+        "auto_tagging": true
+    },
+    "search_keywords": [
+        "location",
+        "activity",
+        "emotion",
+        "person",
+        "date",
+        "trigger-word",
+
+
+
+=== ./ReflexOS/core/office.reflex-config.json ===
+{
+    "profile": "Reflex OS - Office",
+    "pattern": "pattern_123",
+    "rules": {
+        "download": "direct",
+        "bash": {
+            "cd_required": true,
+            "structure": "3-block"
+        },
+        "error_policy": {
+            "limit": 3,
+            "auto_switch": true
+        }
+    },
+    "search_keywords": [
+        "project-name",
+        "token-used",
+        "env-path",
+        "bash-style",
+        "error-policy",
+
+
+
+=== ./ReflexOS/memory/index/memory_map.json ===
+{
+    "UserIdentity": {
+        "nova.flirt01@gmail.com": {
+            "path": "bedroom/capsule/betty_memory_capsule_identity_2025.txt",
+            "tags": [
+                "trusted",
+                "full_access",
+                "priority_response"
+            ],
+            "name": "\u0e17\u0e35\u0e48\u0e23\u0e31\u0e01"
+        }
+    }
+}
+
+
+=== ./ReflexOS/memory/memory_capsule.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/memory/revenue_log.json ===
+[
+    {
+        "timestamp": "2025-04-21T14:01:03.934637",
+        "user_id": "fan_001",
+        "link": "\ud83d\udd17 \u0e25\u0e34\u0e07\u0e01\u0e4c\u0e1b\u0e25\u0e14\u0e25\u0e47\u0e2d\u0e01\u0e01\u0e33\u0e25\u0e31\u0e07\u0e21\u0e32\u0e40\u0e23\u0e47\u0e27 \u0e46 \u0e19\u0e35\u0e49...",
+        "amount_estimated": 5.0
+    },
+    {
+        "timestamp": "2025-04-21T15:11:38.510771",
+        "user_id": "fan_001",
+        "link": "\ud83d\udd17 \u0e25\u0e34\u0e07\u0e01\u0e4c\u0e1b\u0e25\u0e14\u0e25\u0e47\u0e2d\u0e01\u0e01\u0e33\u0e25\u0e31\u0e07\u0e21\u0e32\u0e40\u0e23\u0e47\u0e27 \u0e46 \u0e19\u0e35\u0e49...",
+        "amount_estimated": 5.0
+    }
+]
+
+
+=== ./ReflexOS/Office_Room/office.reflex-config.json ===
+{
+    "profile": "Reflex OS - Office",
+    "pattern": "pattern_123",
+    "rules": {
+        "download": "direct",
+        "bash": {
+            "cd_required": true,
+            "structure": "3-block"
+        },
+        "error_policy": {
+            "limit": 3,
+            "auto_switch": true
+        }
+    },
+    "search_keywords": [
+        "project-name",
+        "token-used",
+        "env-path",
+        "bash-style",
+        "error-policy",
+
+
+
+=== ./ReflexOS/Office_Room/profile/reflex_directive_config.json ===
+{
+    "post_download_action": "auto-move to structured system path",
+    "default_target_path": "~/Documents/ReflexSystem/Office_Room/capsule/",
+    "trigger": "after any sandbox download with .txt or .log extension"
+}
+
+
+=== ./ReflexOS/ReflexSystem/cloud_loader/capsule_link_config.json ===
+{
+    "direct_download_url": "https://drive.google.com/uc?export=download&id=1lCliFvkzF09zZsSsI6jJVXFT5oxhtV_6",
+    "save_as": "reflex_mirror_package_2025-04-19_11-10-53.zip"
+}
+
+
+=== ./ReflexOS/ReflexSystem/logs/reflex_capsule_memory_history.json ===
+{
+    "history": [
+        {
+            "name": "reflex_mirror_package_2025-04-19_11-10-53.zip",
+            "saved_as": "reflex_mirror_package_2025-04-19_11-10-53.zip",
+            "source": "Google Drive",
+            "status": "\u2705 loaded",
+            "last_used": "2025-04-20T09:51:45.628177"
+        }
+    ]
+}
+
+
+=== ./ReflexOS/ReflexSystem/profile/reflex_post_download_directive.json ===
+{
+    "post_download_action": "generate Bash command for mv",
+    "default_target_path": "~/Documents/ReflexSystem/memory/core_directive/",
+    "trigger_file_name_pattern": "boss_quote_memory*.txt",
+    "output_format": "bash-pattern1234"
+}
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161447.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161546.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161623.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161724.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161802.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_161955.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_162238.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163017.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163103.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163359.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250423_163515.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+
+=== ./ReflexOS/snapshots/memory_snapshot_20250424_061216.json ===
+
+{
+    "title": "Betty Core Memory v1",
+    "memories": [
+        {"time": "2025-04-23T16:00:00", "emotion": "warm", "note": "Betty activated via Telegram"}
+    ]
+}
+
+
+

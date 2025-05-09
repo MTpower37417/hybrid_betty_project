@@ -1,0 +1,854 @@
+.
+ |  Companion_Engine
+ |   |  __init__.py
+ |   |  emotion_analyzer.py
+ |   |  persona_aligner.py
+ |  MemoryCapsule
+ |   |  MemoryCapsule_StarterProject.zip
+ |   |  README.md
+ |   |  README_Legacy.md
+ |   |  after_me_agent.py
+ |   |  event_memory.jsonl
+ |   |  identity_memory.yaml
+ |   |  persona_synth.py
+ |  OfficeNew 1
+ |  README_CURSOR.md
+ |  architect_console
+ |   |  architect
+ |   |   |  console.html
+ |   |   |  tools.py
+ |   |  core
+ |   |   |  reflexos_server.py
+ |   |  logs
+ |   |   |  favorite_log.json
+ |   |   |  memory_stack.json
+ |   |  ui
+ |  architect_fix
+ |   |  core
+ |   |   |  reflexos_server.py
+ |   |   |  static
+ |   |   |  templates
+ |   |   |   |  console.html
+ |   |   |   |  index.html
+ |  archived
+ |   |  __pycache__
+ |   |   |  reflexos_server.cpython-311.pyc
+ |   |  backups
+ |   |   |  ReflexMemory.zip
+ |   |   |  ReflexOS-Cloud-Deploy.zip
+ |   |   |  ReflexOS_Architect_FixServer.zip
+ |   |   |  ReflexOS_Betty_ArchitectConsole.zip
+ |   |   |  ReflexOS_Betty_CountMsg.zip
+ |   |   |  ReflexOS_Betty_DarkMode.zip
+ |   |   |  ReflexOS_Betty_ExportCombo.zip
+ |   |   |  ReflexOS_Betty_ExportMD.zip
+ |   |   |  ReflexOS_Betty_Favorite.zip
+ |   |   |  ReflexOS_Betty_FavoriteView.zip
+ |   |   |  ReflexOS_Betty_FixTimeAgo.zip
+ |   |   |  ReflexOS_Betty_FullStack.zip
+ |   |   |  ReflexOS_Betty_HistoryPlus.zip
+ |   |   |  ReflexOS_Betty_LogDownload.zip
+ |   |   |  ReflexOS_Betty_LogSearch.zip
+ |   |   |  ReflexOS_Betty_NoReset.zip
+ |   |   |  ReflexOS_Betty_Preview.zip
+ |   |   |  ReflexOS_Betty_QuickInject.zip
+ |   |   |  ReflexOS_Betty_RelativeTime.zip
+ |   |   |  ReflexOS_Betty_ToggleHistory.zip
+ |   |   |  ReflexOS_Betty_TxtLog.zip
+ |   |   |  ReflexOS_Betty_UIClean.zip
+ |   |   |  ReflexOS_Pattern1.zip
+ |   |   |  ReflexOS_WebUI.zip
+ |   |   |  ReflexOS_WebUI_BettyPersona.zip
+ |   |   |  ReflexOS_WebUI_GPT.zip
+ |   |   |  ReflexSystem_Installer_20250419_155412.zip
+ |   |   |  ReflexSystem_Installer_FULL_20250419_155748.zip
+ |   |   |  Reflex_CloudMemory_LoaderPack.zip
+ |   |   |  betty_lesson_bundle.zip
+ |   |   |  core_20250430_163146
+ |   |   |   |  __pycache__
+ |   |   |   |   |  reflexos_context_extender.cpython-311.pyc
+ |   |   |   |   |  reflexos_context_viewer.cpython-311.pyc
+ |   |   |   |   |  reflexos_emotion_layer.cpython-311.pyc
+ |   |   |   |   |  reflexos_memory_core.cpython-311.pyc
+ |   |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |   |   |  reflexos_server_context_ready.cpython-311.pyc
+ |   |   |   |  config.env
+ |   |   |   |  index.html
+ |   |   |   |  log_validator.py
+ |   |   |   |  memory
+ |   |   |   |   |  emotion
+ |   |   |   |   |   |  user_a_emotion.json
+ |   |   |   |   |  extended
+ |   |   |   |   |   |  user_a_context.json
+ |   |   |   |   |  imported_logs
+ |   |   |   |   |   |  QA_bet190468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet200468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet210468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet220468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet230468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet250468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet270468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet280468new_2.clean.txt
+ |   |   |   |   |   |  QA_bet290468new_2.clean.txt
+ |   |   |   |   |  longterm
+ |   |   |   |   |   |  user_a_2025.json
+ |   |   |   |   |  stack
+ |   |   |   |   |   |  user_a_stack.json
+ |   |   |   |  memory_importer.py
+ |   |   |   |  reflexos_context_extender.py
+ |   |   |   |  reflexos_context_viewer.py
+ |   |   |   |  reflexos_emotion_layer.py
+ |   |   |   |  reflexos_memory_core.py
+ |   |   |   |  reflexos_server.py
+ |   |   |   |  reflexos_server_context_ready.py
+ |   |   |   |  reflexos_server_context_ready_v2.py
+ |   |   |   |  reflexos_server_final_ready.py
+ |   |   |   |  reflexos_server_full_ready.py
+ |   |   |   |  reflexos_server_fullstack_ready.py
+ |   |   |   |  reflexos_server_memory_ready.py
+ |   |   |   |  reflexos_web_context_ui.py
+ |   |   |   |  reflexos_web_memory_integrated.py
+ |   |   |   |  rename_clean_filenames.py
+ |   |   |   |  templates
+ |   |   |   |   |  index.html
+ |   |   |   |   |  index_mobile_ready.html
+ |   |   |   |  txt_cleaner.py
+ |   |   |  imported_logs.zip
+ |   |   |  memory_snapshot_20250423_161447.json
+ |   |   |  memory_snapshot_20250423_161546.json
+ |   |   |  memory_snapshot_20250423_161623.json
+ |   |   |  memory_snapshot_20250423_161724.json
+ |   |   |  memory_snapshot_20250423_161802.json
+ |   |   |  memory_snapshot_20250423_161955.json
+ |   |   |  memory_snapshot_20250423_162238.json
+ |   |   |  memory_snapshot_20250423_163017.json
+ |   |   |  memory_snapshot_20250423_163103.json
+ |   |   |  memory_snapshot_20250423_163359.json
+ |   |   |  memory_snapshot_20250423_163515.json
+ |   |   |  memory_snapshot_20250424_061216.json
+ |   |   |  memory_stack1.json
+ |   |   |  reflex_backup_20250419_154819.zip
+ |   |   |  reflex_backup_20250419_155121.zip
+ |   |   |  reflex_mirror_package_2025-04-19_11-10-53.zip
+ |   |   |  reflexos_integrated_server.py
+ |   |   |  reflexos_server1.py
+ |   |   |  reflexos_server_ready_final.zip
+ |   |   |  snapshots
+ |   |  duplicate_templates
+ |   |   |  core
+ |   |   |   |  templates
+ |   |   |   |   |  index.html
+ |   |   |   |   |  index_debug.html
+ |   |  integration
+ |   |   |  betty_server_integration.py
+ |   |  old_python_modules
+ |   |   |  gpt_trainer_gpt_debug.py
+ |   |   |  gpt_trainer_gpt_enabled.py
+ |   |   |  gpt_trainer_gpt_enabled_fixed.py
+ |   |   |  gpt_trainer_gpt_enabled_repaired.py
+ |   |  old_servers
+ |   |   |  betty_server_legacy.py
+ |   |   |  betty_server_old_reflex.py
+ |   |   |  betty_webui_gpt_server_debug.py
+ |   |   |  reflexos_server - Copy.py
+ |   |   |  reflexos_server_context_ready.py
+ |   |   |  reflexos_server_context_ready_v2.py
+ |   |   |  reflexos_server_final_ready.py
+ |   |   |  reflexos_server_full_ready.py
+ |   |   |  reflexos_server_fullstack_ready.py
+ |   |   |  reflexos_server_memory_ready.py
+ |   |   |  reflexos_server_simple.py
+ |   |  pycache
+ |   |  server
+ |   |  trainer
+ |   |   |  gpt_trainer.py
+ |   |   |  gpt_trainer_fixed.py
+ |   |   |  gpt_trainer_gpt_enabled.py
+ |  betty_optimized
+ |   |  .env
+ |   |  BettyPersona.txt
+ |   |  README.md
+ |   |  betty_context.py
+ |   |  betty_gpt_bridge.py
+ |   |  betty_memory.py
+ |   |  betty_persona_profile.json
+ |   |  betty_server.py
+ |   |  capsule_manager.py
+ |   |  emotion_analyzer.py
+ |   |  index.html
+ |   |  memory
+ |   |   |  capsule
+ |   |   |   |  capsule_2025-05-02_15-35-03.json
+ |   |   |   |  capsule_2025-05-02_15-35-42.json
+ |   |   |   |  capsule_2025-05-02_15-35-57.json
+ |   |   |   |  capsule_2025-05-02_15-36-24.json
+ |   |   |   |  capsule_2025-05-02_15-48-48.json
+ |   |   |   |  capsule_2025-05-02_15-49-30.json
+ |   |   |   |  capsule_2025-05-02_15-49-38.json
+ |   |   |   |  capsule_2025-05-02_15-51-26.json
+ |   |   |   |  capsule_2025-05-02_15-54-52.json
+ |   |   |   |  capsule_2025-05-02_16-02-36.json
+ |   |   |   |  capsule_2025-05-02_16-07-40.json
+ |   |   |   |  capsule_2025-05-02_16-09-40.json
+ |   |   |   |  capsule_2025-05-02_16-14-32.json
+ |   |   |   |  capsule_2025-05-02_16-17-17.json
+ |   |   |   |  capsule_2025-05-02_16-19-23.json
+ |   |   |   |  capsule_2025-05-02_16-19-29.json
+ |   |   |   |  capsule_2025-05-02_16-19-34.json
+ |   |   |   |  capsule_2025-05-02_16-28-00.json
+ |   |   |   |  capsule_2025-05-02_16-55-22.json
+ |   |   |   |  capsule_2025-05-02_17-03-45.json
+ |   |   |   |  capsule_2025-05-02_17-07-22.json
+ |   |   |   |  capsule_2025-05-02_17-07-38.json
+ |   |   |   |  capsule_2025-05-02_17-08-38.json
+ |   |   |   |  capsule_2025-05-02_17-10-08.json
+ |   |   |   |  capsule_2025-05-02_17-12-39.json
+ |   |   |   |  capsule_2025-05-02_17-13-38.json
+ |   |   |   |  capsule_2025-05-02_17-14-22.json
+ |   |   |   |  capsule_2025-05-02_17-14-57.json
+ |   |   |   |  capsule_2025-05-02_17-19-16.json
+ |   |   |   |  capsule_2025-05-02_17-19-29.json
+ |   |   |   |  capsule_2025-05-02_17-25-04.json
+ |   |   |   |  capsule_2025-05-02_17-25-56.json
+ |   |   |   |  capsule_2025-05-02_17-42-33.json
+ |   |   |   |  capsule_2025-05-02_17-42-47.json
+ |   |   |   |  capsule_2025-05-02_17-43-37.json
+ |   |   |   |  capsule_2025-05-02_17-44-25.json
+ |   |   |   |  capsule_2025-05-03_16-43-02.json
+ |   |   |   |  capsule_2025-05-03_16-50-49.json
+ |   |   |   |  capsule_2025-05-03_16-51-03.json
+ |   |   |   |  capsule_2025-05-03_16-51-14.json
+ |   |   |  emotion
+ |   |   |   |  user_a_emotion.json
+ |   |   |  extended
+ |   |   |  longterm
+ |   |   |  stack
+ |   |   |   |  user_a_stack.json
+ |   |  reflex_bridge_server.py
+ |   |  reflex_integration.py
+ |   |  reflexos
+ |   |   |  betty_personality_context.txt
+ |   |   |  capsule
+ |   |   |   |  betty_memory_capsule_identity_2025.txt
+ |   |   |   |  betty_memory_core_2025-04-22.txt
+ |   |   |  capsule_full_reflexsync_190425_remastered.txt
+ |   |  reflexos_emotion_advanced.py
+ |   |  reflexos_memory_core.py
+ |   |  requirements.txt
+ |   |  static
+ |   |   |  css
+ |   |   |  js
+ |  betty_server_main_backup.py
+ |  cloud_loader
+ |   |  reflex_auto_refresh.py
+ |  config
+ |   |  betty_persona_profile.json
+ |  core
+ |   |  .env
+ |   |  BettyPersona.txt
+ |   |  Betty_Ai_GPT_Trainer_Module
+ |   |   |  __pycache__
+ |   |   |   |  betty_server_integration.cpython-311.pyc
+ |   |   |   |  gpt_trainer.cpython-311.pyc
+ |   |   |  betty_server_integration.py
+ |   |   |  direct_gpt.py
+ |   |   |  fix_gpt_trainer.py
+ |   |   |  gpt_config.json
+ |   |   |  gpt_trainer.py
+ |   |   |  index.html
+ |   |   |  readme.md
+ |   |   |  requirements.txt
+ |   |  ReflexOS
+ |   |   |  .git
+ |   |   |  Bedroom_Betty
+ |   |   |   |  bedroom.reflex-config.json
+ |   |   |   |  cache
+ |   |   |   |   |  betty_2025-04-19_11-46-28.txt
+ |   |   |   |  emotion_plot.png
+ |   |   |   |  emotion_report.csv
+ |   |   |   |  logs
+ |   |   |   |   |  betty_start_2025-04-19_15-52-30.txt
+ |   |   |   |   |  capsule_emotion_frustrated_2025-04-19_16-29-05.txt
+ |   |   |   |   |  capsule_emotion_hopeful_2025-04-19_16-37-43.txt
+ |   |   |   |   |  capsule_event_unzip_massive_2025-04-19_16-29-05.txt
+ |   |   |   |   |  emotion_happy_2025-04-19_16-00-12.txt
+ |   |   |   |   |  emotion_sad_2025-04-19_12-42-13.txt
+ |   |   |   |   |  emotion_sad_2025-04-19_15-29-26.txt
+ |   |   |  Companion_Engine
+ |   |   |   |  betty_ask_me_first.py
+ |   |   |   |  betty_core_seed_v1.py
+ |   |   |   |  betty_scheduler.py
+ |   |   |   |  capsule_injector.py
+ |   |   |   |  core_loop_reaction.py
+ |   |   |   |  dream_model.py
+ |   |   |   |  emotion_analyzer.py
+ |   |   |   |  emotion_responder.py
+ |   |   |   |  emotion_tracker.py
+ |   |   |   |  emotional_sync_engine.py
+ |   |   |   |  journal_writer.py
+ |   |   |   |  memory_auto_recall.py
+ |   |   |   |  persona_aligner.py
+ |   |   |   |  reflex_emotion_guard.py
+ |   |   |   |  reflex_inject.py
+ |   |   |   |  telegram_notify.py
+ |   |   |   |  timeline_graph.py
+ |   |   |   |  timeline_merge.py
+ |   |   |   |  voice_tts.py
+ |   |   |  FanvueAPI
+ |   |   |   |  fanvue_webhook_listener.py
+ |   |   |  FlirtAI
+ |   |   |   |  auto_reply_engine.py
+ |   |   |  Jarvis_Lab
+ |   |   |   |  logs
+ |   |   |   |   |  capsule_emotion_curious_2025-04-19_16-37-43.txt
+ |   |   |  Office_Room
+ |   |   |   |  cache
+ |   |   |   |   |  office_2025-04-19_0732.txt
+ |   |   |   |   |  office_2025-04-21_1145.txt
+ |   |   |   |  capsule
+ |   |   |   |   |  reflex_core_log_2025-04-20.txt
+ |   |   |   |  emotional_tracker.py
+ |   |   |   |  logs
+ |   |   |   |   |  capsule_event_error_handled_2025-04-19_16-37-43.txt
+ |   |   |   |   |  capsule_next_reflex_2025-04-19_11-07-34.txt
+ |   |   |   |   |  capsule_summary_2025-04-19_10-51-34.txt
+ |   |   |   |   |  lifelog_2025-04-19_18-02-48.txt
+ |   |   |   |   |  lifelog_2025-04-19_18-03-54.txt
+ |   |   |   |   |  lifelog_2025-04-19_18-05-59.txt
+ |   |   |   |   |  office_start_2025-04-19_15-51-52.txt
+ |   |   |   |   |  office_start_2025-04-19_15-52-30.txt
+ |   |   |   |  office.reflex-config.json
+ |   |   |   |  profile
+ |   |   |   |   |  reflex_directive_config.json
+ |   |   |   |  reflex_backup.py
+ |   |   |   |  reflex_plot.py
+ |   |   |   |  reflex_report.py
+ |   |   |   |  reflex_restore.py
+ |   |   |   |  reflex_summary.py
+ |   |   |  Persona_Assets
+ |   |   |   |  intro_voiceover.mp3
+ |   |   |  Procfile
+ |   |   |  ReflexSystem
+ |   |   |   |  cloud_loader
+ |   |   |   |   |  capsule_link_config.json
+ |   |   |   |   |  gdrive_to_direct.py
+ |   |   |   |   |  reflex_auto_refresh.py
+ |   |   |   |   |  reflex_cloud_loader.py
+ |   |   |   |  logs
+ |   |   |   |   |  capsule_autoload.map
+ |   |   |   |   |  reflex_capsule_memory_history.json
+ |   |   |   |  memory
+ |   |   |   |   |  core_directive
+ |   |   |   |   |   |  boss_quotes.trust
+ |   |   |   |  profile
+ |   |   |   |   |  reflex_post_download_directive.json
+ |   |   |   |  reflex_bootstrap.py
+ |   |   |  ReflexSystem_Fusion
+ |   |   |   |  fusion_betty_brainstorm_2025-04-19_16-37-43.txt
+ |   |   |   |  fusion_betty_context_sync_2025-04-19_16-29-05.txt
+ |   |   |   |  fusion_betty_error_handled_2025-04-19_16-29-05.txt
+ |   |   |   |  fusion_office_context_sync_2025-04-19_16-37-43.txt
+ |   |   |  ReflexSystem_Sync
+ |   |   |   |  betty
+ |   |   |   |   |  capsule_emotion_frustrated_2025-04-19_16-29-05.txt
+ |   |   |   |   |  capsule_emotion_hopeful_2025-04-19_16-37-43.txt
+ |   |   |   |   |  capsule_event_unzip_massive_2025-04-19_16-29-05.txt
+ |   |   |   |  jarvis
+ |   |   |   |   |  capsule_emotion_curious_2025-04-19_16-37-43.txt
+ |   |   |   |  office
+ |   |   |   |   |  capsule_event_error_handled_2025-04-19_16-37-43.txt
+ |   |   |  Revenue_Engine
+ |   |   |   |  auto_ppv_sender.py
+ |   |   |   |  ppv_link_manager.py
+ |   |   |  backups
+ |   |   |  bedroom
+ |   |   |   |  capsule
+ |   |   |   |   |  betty_memory_capsule_identity_2025.txt
+ |   |   |   |   |  betty_memory_core_2025-04-22.txt
+ |   |   |   |  persona
+ |   |   |   |   |  betty_persona_profile.json
+ |   |   |   |  triggers
+ |   |   |   |   |  reflex_auto_trigger_wdgqGN.json
+ |   |   |  betty_dialogue_memory
+ |   |   |   |  memory_dialogue_2025-04-22.txt
+ |   |   |  betty_emotion_logs
+ |   |   |   |  emotion_log_2025-04-22.txt
+ |   |   |  betty_journals
+ |   |   |   |  journal_2025-04-22.txt
+ |   |   |  betty_personality_context.py
+ |   |   |  betty_personality_context.txt
+ |   |   |  betty_safe_capsule
+ |   |   |   |  capsule_2025-04-22.txt
+ |   |   |  betty_speaks_with_context.py
+ |   |   |  capsule_browser.py
+ |   |   |  context_auto_updater.py
+ |   |   |  core
+ |   |   |   |  Bedroom_Betty
+ |   |   |   |   |  cache
+ |   |   |   |   |   |  memory_capsule.txt
+ |   |   |   |  auto_patch_paths.py
+ |   |   |   |  bedroom.reflex-config.json
+ |   |   |   |  emotional_tracker.py
+ |   |   |   |  office.reflex-config.json
+ |   |   |   |  reflex_auto_refresh.py
+ |   |   |   |  reflex_autopilot.py
+ |   |   |   |  reflex_autorecall_all.py
+ |   |   |   |  reflex_autorecall_office.py
+ |   |   |   |  reflex_backup.py
+ |   |   |   |  reflex_betty_ai.py
+ |   |   |   |  reflex_bootstrap.py
+ |   |   |   |  reflex_build_package.py
+ |   |   |   |  reflex_capsule_replay.py
+ |   |   |   |  reflex_causal.py
+ |   |   |   |  reflex_cloud_loader.py
+ |   |   |   |  reflex_full_brain.py
+ |   |   |   |  reflex_fusion_linker.py
+ |   |   |   |  reflex_gui_hybrid_launcher.py
+ |   |   |   |  reflex_gui_launcher.py
+ |   |   |   |  reflex_gui_unified.py
+ |   |   |   |  reflex_hybrid_trigger.py
+ |   |   |   |  reflex_inject.py
+ |   |   |   |  reflex_jarvis_ai.py
+ |   |   |   |  reflex_lifelog_auto.py
+ |   |   |   |  reflex_lifelog_scheduler.py
+ |   |   |   |  reflex_lifelog_writer.py
+ |   |   |   |  reflex_memory_search.py
+ |   |   |   |  reflex_merge.py
+ |   |   |   |  reflex_merge_timeline.py
+ |   |   |   |  reflex_persona_router.py
+ |   |   |   |  reflex_plan_assign_ai.py
+ |   |   |   |  reflex_plan_flowchart.py
+ |   |   |   |  reflex_plan_gui.py
+ |   |   |   |  reflex_plan_trigger.py
+ |   |   |   |  reflex_plot.py
+ |   |   |   |  reflex_predictor.py
+ |   |   |   |  reflex_reactor.py
+ |   |   |   |  reflex_readme_generator.py
+ |   |   |   |  reflex_recall.py
+ |   |   |   |  reflex_recall_planner.py
+ |   |   |   |  reflex_remember.py
+ |   |   |   |  reflex_report.py
+ |   |   |   |  reflex_restore.py
+ |   |   |   |  reflex_rotate.py
+ |   |   |   |  reflex_search.py
+ |   |   |   |  reflex_smart_suggest.py
+ |   |   |   |  reflex_speaker.py
+ |   |   |   |  reflex_status.py
+ |   |   |   |  reflex_story_export_html.py
+ |   |   |   |  reflex_story_gui.py
+ |   |   |   |  reflex_story_mode.py
+ |   |   |   |  reflex_summary.py
+ |   |   |   |  reflex_sync_engine.py
+ |   |   |   |  reflex_timeline_viewer.py
+ |   |   |  cron_command.py
+ |   |   |  debug_log.txt
+ |   |   |  dialogue_log.txt
+ |   |   |  emotion_dialogue.py
+ |   |   |  emotion_monitor.py
+ |   |   |  emotion_monitor_scheduler.bat
+ |   |   |  emotion_responder_to_telegram.py
+ |   |   |  emotion_response_trigger.py
+ |   |   |  emotion_timeline_graph.py
+ |   |   |  emotion_tone_trigger.py
+ |   |   |  feedback_response_logger.py
+ |   |   |  gpt_output.txt
+ |   |   |  imports
+ |   |   |  last_dialogue_response_id.txt
+ |   |   |  last_feedback_id.txt
+ |   |   |  last_memory_aware_id.txt
+ |   |   |  last_response_update.txt
+ |   |   |  last_update_id.txt
+ |   |   |  linked_emotion_monitor.py
+ |   |   |  logs
+ |   |   |   |  logs
+ |   |   |   |   |  reflex_memory_transfer.log
+ |   |   |  memory
+ |   |   |   |  README.txt
+ |   |   |   |  bedroom
+ |   |   |   |   |  chat_capsules
+ |   |   |   |   |   |  betty20-4-2568new 2.txt
+ |   |   |   |   |   |  betty21-4-2568new 2.txt
+ |   |   |   |  core_directive
+ |   |   |   |   |  boss_quote_memory.txt
+ |   |   |   |  index
+ |   |   |   |   |  memory_map.json
+ |   |   |   |  memory_capsule.json
+ |   |   |   |  memory_capsule.json.bak
+ |   |   |   |  merged_betty.txt
+ |   |   |   |  merged_capsule_timeline.txt
+ |   |   |   |  merged_office.txt
+ |   |   |   |  reflex_lifelog_diary.txt
+ |   |   |   |  reflex_plan_from_capsule.txt
+ |   |   |   |  reflex_story_narrative.txt
+ |   |   |   |  revenue_log.json
+ |   |   |  memory_capsule
+ |   |   |   |  capsule_full_reflexsync_190425_remastered.txt
+ |   |   |  memory_integration_engine.py
+ |   |   |  memory_integration_engine_v2.py
+ |   |   |  memory_journal.txt
+ |   |   |  memory_log.txt
+ |   |   |  memory_response_recorder.py
+ |   |   |  memory_trace_log.txt
+ |   |   |  monthly_emotion_report.py
+ |   |   |  pattern
+ |   |   |   |  pattern_1234.txt
+ |   |   |  pattern_guardian.sh
+ |   |   |  reflex_auto_backup.sh
+ |   |   |  reflex_auto_restore.sh
+ |   |   |  reflex_auto_setup.sh
+ |   |   |  reflex_bootstrap.py
+ |   |   |  reflex_build_final_package.sh
+ |   |   |  reflex_build_package.sh
+ |   |   |  reflex_cloud_sync.sh
+ |   |   |  reflex_deploy_all.sh
+ |   |   |  reflex_inject.py
+ |   |   |  reflex_office_bootstrap.sh
+ |   |   |  reflex_story_narrative.html
+ |   |   |  reflex_windows_launcher.bat
+ |   |   |  reflex_windows_launcher_eng.bat
+ |   |   |  reflexos_web_ui.py
+ |   |   |  reply_to_capsule_logger.py
+ |   |   |  requirements.txt
+ |   |   |  safe_capsule_writer.py
+ |   |   |  simple_memory_log.txt
+ |   |   |  snapshots
+ |   |   |  start.sh
+ |   |   |  telegram_feedback_listener.py
+ |   |   |  telegram_journal_push.py
+ |   |   |  telegram_memory_aware_bot.py
+ |   |   |  telegram_memory_aware_bot_v2.py
+ |   |   |  telegram_memory_aware_bot_v2_fixed (2).py
+ |   |   |  telegram_reflex_memory_bot_debuglog.py
+ |   |   |  tools
+ |   |   |   |  reflex_bridge_server.py
+ |   |   |   |  reflex_chatbridge_relay.py
+ |   |   |   |  tally_webhook_receiver.py
+ |   |   |  web_ui.py
+ |   |   |  weekly_reflex_summary.py
+ |   |  __pycache__
+ |   |   |  betty_emotion_filter.cpython-311.pyc
+ |   |   |  betty_emotion_temperature_mapper.cpython-311.pyc
+ |   |   |  betty_memory.cpython-311.pyc
+ |   |   |  betty_prompt_builder_v4.cpython-311.pyc
+ |   |   |  gpt_trainer.cpython-311.pyc
+ |   |   |  gpt_with_emotion_control.cpython-311.pyc
+ |   |   |  reflex_prompt_orchestrator.cpython-311.pyc
+ |   |   |  reflexos_gpt_bridge.cpython-311.pyc
+ |   |  advanced_memory_system.py
+ |   |  betty_auto_feedback_hook.py
+ |   |  betty_core_identity.py
+ |   |  betty_curriculum_runtime_config.json
+ |   |  betty_deep_convo.py
+ |   |  betty_emotion_filter.py
+ |   |  betty_emotion_temperature_mapper.py
+ |   |  betty_insight_fusion.py
+ |   |  betty_integrated.py
+ |   |  betty_integrated_server.py
+ |   |  betty_memory.py
+ |   |  betty_openmind_core.py
+ |   |  betty_persona_core.py
+ |   |  betty_persona_profile.json
+ |   |  betty_prompt_builder.py
+ |   |  betty_prompt_builder_v4.py
+ |   |  betty_server_main_orchestrated.py
+ |   |  betty_webui_gpt_server_debug.py
+ |   |  call_gpt_betty_identity_fixed.py
+ |   |  call_gpt_persona.py
+ |   |  capsule_lookup.py
+ |   |  capsule_recall_agent.py
+ |   |  file_summaries.txt
+ |   |  fix_bridge.py
+ |   |  gpt_with_emotion_control.py
+ |   |  helper.txt
+ |   |  index.html
+ |   |  lesson_manager.py
+ |   |  lessons
+ |   |   |  betty_openmind_curriculum_core.json
+ |   |   |  insert_into_reflexos_flow.txt
+ |   |   |  openmind_pack_01.json
+ |   |  log_validator.py
+ |   |  logs
+ |   |   |  betty_ai.log
+ |   |   |  betty_server.log
+ |   |   |  betty_trainer.log
+ |   |  memory
+ |   |   |  capsule
+ |   |   |   |  capsule_2025-05-02_15-35-03.json
+ |   |   |   |  capsule_2025-05-02_15-35-42.json
+ |   |   |   |  capsule_2025-05-02_15-35-57.json
+ |   |   |   |  capsule_2025-05-02_15-36-24.json
+ |   |   |   |  capsule_2025-05-02_15-48-48.json
+ |   |   |   |  capsule_2025-05-02_15-49-30.json
+ |   |   |   |  capsule_2025-05-02_15-49-38.json
+ |   |   |   |  capsule_2025-05-02_15-51-26.json
+ |   |   |   |  capsule_2025-05-02_15-54-52.json
+ |   |   |   |  capsule_2025-05-02_16-02-36.json
+ |   |   |   |  capsule_2025-05-02_16-07-40.json
+ |   |   |   |  capsule_2025-05-02_16-09-40.json
+ |   |   |   |  capsule_2025-05-02_16-14-32.json
+ |   |   |   |  capsule_2025-05-02_16-17-17.json
+ |   |   |   |  capsule_2025-05-02_16-19-23.json
+ |   |   |   |  capsule_2025-05-02_16-19-29.json
+ |   |   |   |  capsule_2025-05-02_16-19-34.json
+ |   |   |   |  capsule_2025-05-02_16-28-00.json
+ |   |   |   |  capsule_2025-05-02_16-55-22.json
+ |   |   |   |  capsule_2025-05-02_17-03-45.json
+ |   |   |   |  capsule_2025-05-02_17-07-22.json
+ |   |   |   |  capsule_2025-05-02_17-07-38.json
+ |   |   |   |  capsule_2025-05-02_17-08-38.json
+ |   |   |   |  capsule_2025-05-02_17-10-08.json
+ |   |   |   |  capsule_2025-05-02_17-12-39.json
+ |   |   |   |  capsule_2025-05-02_17-13-38.json
+ |   |   |   |  capsule_2025-05-02_17-14-22.json
+ |   |   |   |  capsule_2025-05-02_17-14-57.json
+ |   |   |   |  capsule_2025-05-02_17-19-16.json
+ |   |   |   |  capsule_2025-05-02_17-19-29.json
+ |   |   |   |  capsule_2025-05-02_17-25-04.json
+ |   |   |   |  capsule_2025-05-02_17-25-56.json
+ |   |   |   |  capsule_2025-05-02_17-42-33.json
+ |   |   |   |  capsule_2025-05-02_17-42-47.json
+ |   |   |   |  capsule_2025-05-02_17-43-37.json
+ |   |   |   |  capsule_2025-05-02_17-44-25.json
+ |   |   |   |  capsule_2025-05-03_16-43-02.json
+ |   |   |   |  capsule_2025-05-03_16-50-49.json
+ |   |   |   |  capsule_2025-05-03_16-51-03.json
+ |   |   |   |  capsule_2025-05-03_16-51-14.json
+ |   |   |  emotion
+ |   |   |   |  emotion_log.json
+ |   |   |   |  user_a_emotion.json
+ |   |   |  extended
+ |   |   |   |  user_a_context.json
+ |   |   |  imported_logs
+ |   |   |   |  QA_bet190468new_2.clean.txt
+ |   |   |   |  QA_bet200468new_2.clean.txt
+ |   |   |   |  QA_bet210468new_2.clean.txt
+ |   |   |   |  QA_bet220468new_2.clean.txt
+ |   |   |   |  QA_bet230468new_2.clean.txt
+ |   |   |   |  QA_bet250468new_2.clean.txt
+ |   |   |   |  QA_bet270468new_2.clean.txt
+ |   |   |   |  QA_bet280468new_2.clean.txt
+ |   |   |   |  QA_bet290468new_2.clean.txt
+ |   |   |   |  Reflex_QA_Extracted.txt
+ |   |   |   |  bet290468new 2.txt
+ |   |   |   |  capsule_full_reflexsync_190425.txt
+ |   |   |  journal
+ |   |   |   |  journal_20250508.txt
+ |   |   |  lessons
+ |   |   |   |  learned_patterns.json
+ |   |   |  longterm
+ |   |   |   |  user_a_2025.json
+ |   |   |  qa_hits_log.json
+ |   |   |  reflexos
+ |   |   |  stack
+ |   |   |   |  user_a_stack.json
+ |   |   |  timeline
+ |   |  memory_core.py
+ |   |  memory_gpt_bridge.py
+ |   |  memory_importer.py
+ |   |  memory_stack.json
+ |   |  openmind_pack_01.json
+ |   |  project_structure.txt
+ |   |  qa_loader.py
+ |   |  qa_search.py
+ |   |  readme.md
+ |   |  reflex_auto_memory_sync.py
+ |   |  reflex_integration.py
+ |   |  reflex_prompt_orchestrator.py
+ |   |  reflexos_advanced_memory.py
+ |   |  reflexos_combined_server.py
+ |   |  reflexos_context_advanced.py
+ |   |  reflexos_context_extender.py
+ |   |  reflexos_context_viewer.py
+ |   |  reflexos_emotion_advanced.py
+ |   |  reflexos_emotion_layer.py
+ |   |  reflexos_gpt_bridge.py
+ |   |  reflexos_gpt_bridge.py.bak
+ |   |  reflexos_gpt_bridge_memory_ready.py
+ |   |  reflexos_memory_core.py
+ |   |  reflexos_server.py
+ |   |  reflexos_web_context_ui.py
+ |   |  reflexos_web_memory_integrated.py
+ |   |  rename_clean_filenames.py
+ |   |  requirements.txt
+ |   |  simple_server.py
+ |   |  structure_history
+ |   |   |  full_structure_20250501.txt
+ |   |  templates
+ |   |   |  index.html
+ |   |  test_run.py
+ |   |  trainer_bridge.py
+ |   |  trainer_feedback_logger.py
+ |   |  training_data.jsonl
+ |   |  txt_cleaner.py
+ |  core_backup
+ |  data
+ |   |  qa_index.json
+ |  extensions
+ |   |  betty_countmsg
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_darkmode
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  integrate.py
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_exportcombo
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_exportmd
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_favorite
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  favorite_log.json
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_favoriteview
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  favorite_log.json
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  favorites.html
+ |   |   |   |  index.html
+ |   |  betty_fixtimeago
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_fullstack
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_history_ui
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_logdownload
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_logsearch
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_noreset
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_preview
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_quickinject
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_relativetime
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_togglehistory
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_txtlog
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  betty_uiclean
+ |   |   |  __pycache__
+ |   |   |   |  reflexos_server.cpython-311.pyc
+ |   |   |  memory_stack.json
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |  fix_bridge.py
+ |  folder_structure.txt
+ |  full_structure.txt
+ |  logs
+ |   |  user_a
+ |   |   |  favorite_log.json
+ |   |   |  memory_stack.json
+ |  memory
+ |   |  capsule
+ |   |  emotion
+ |   |   |  emotion_log.json
+ |   |   |  user_a_emotion.json
+ |   |  extended
+ |   |   |  user_a_context.json
+ |   |  journal
+ |   |  longterm
+ |   |  stack
+ |   |   |  user_a_stack.json
+ |   |  timeline
+ |  reflexos_context_advanced.py
+ |  reflexos_server_FULLCHAT.py
+ |  reflexos_server_PATCHED.py
+ |  reflexos_webui_gpt
+ |   |  reflexos_server.py
+ |   |  templates
+ |   |   |  index.html
+ |  templates
+ |   |  index.html
+ |  tools
+ |  ui
+ |   |  persona_ui
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html
+ |   |  webui
+ |   |   |  reflexos_server.py
+ |   |   |  templates
+ |   |   |   |  index.html

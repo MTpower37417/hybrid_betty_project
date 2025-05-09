@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflex Betty (Mobile)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #33ff66;
+      padding: 1em;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .chatbox {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .message {
+      background: #222;
+      padding: 1em;
+      margin-bottom: 0.5em;
+      border-radius: 10px;
+    }
+    .bot {
+      background: #1a1a1a;
+      color: #33ff66;
+    }
+    .input-area {
+      display: flex;
+      margin-top: 1em;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 0.8em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+    }
+    button {
+      padding: 0.8em 1em;
+      font-size: 1em;
+      border: none;
+      background: #33ff66;
+      color: black;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <h1>เบตตี้: WebUI มือถือ</h1>
+    <div class="message bot">สวัสดีค่ะที่รัก! ยินดีต้อนรับผ่านมือถือ 🖤</div>
+    <form class="input-area" method="POST" action="/input">
+      <input type="text" name="msg" placeholder="พิมพ์ข้อความของคุณ..." required />
+      <button type="submit">ส่ง</button>
+    </form>
+  </div>
+</body>
+</html>

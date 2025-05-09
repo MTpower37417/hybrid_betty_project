@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รายการโปรดของคุณ</title>
+</head>
+<body>
+    <h1>📂 รายการโปรด</h1>
+    {% if favs %}
+        {% for item in favs %}
+            <div style="margin-bottom: 20px;">
+                <small>{{ item.time }}</small>
+                <p><b>คุณ:</b> {{ item.user }}<br><b>เบตตี้:</b> {{ item.betty }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>ยังไม่มีรายการโปรดเลยค่ะ</p>
+    {% endif %}
+    <a href="/">← กลับ</a>
+</body>
+</html>

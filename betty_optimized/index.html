@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betty AI - Dark Mode</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --highlight: #bb86fc;
+            --secondary: #03dac6;
+            --error: #cf6679;
+            --dark-surface: #252525;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #0d0d0d;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            overflow-y: auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            min-height: 400px;
+            max-height: 60vh;
+        }
+        
+        .message {
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 80%;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        
+        .user-message {
+            align-self: flex-end;
+            background-color: var(--highlight);
+            color: #000;
+            margin-left: 20%;
+        }
+        
+        .betty-message {
+            align-self: flex-start;
+            background-color: #2e2e2e;
+            color: var(--text-color);
+            margin-right: 20%;
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        
+        input, button {
+            padding: 0.75rem;
+            border-radius: 4px;
+        }
+        
+        input {
+            flex: 1;
+            background-color: #333;
+            color: var(--text-color);
+            border: none;
+            outline: none;
+        }
+        
+        button {
+            background-color: var(--secondary);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #02b3a4;
+        }
+        
+        .memory-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .memory-card {
+            padding: 0.5rem 1rem;
+            background-color: var(--dark-surface);
+            border-radius: 4px;
+            flex: 1;
+            margin: 0.5rem;
+            min-width: 200px;
+        }
+        
+        .memory-card h3 {
+            color: var(--highlight);
+            margin-top: 0;
+        }
+        
+        .emotion-tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .emotion-joy, .emotion-happy { background-color: #ffc107; color: #000; }
+        .emotion-sadness, .emotion-sad { background-color: #2196f3; color: #fff; }
+        .emotion-anger { background-color: #f44336; color: #fff; }
+        .emotion-fear { background-color: #9c27b0; color: #fff; }
+        .emotion-surprise { background-color: #ff9800; color: #000; }
+        .emotion-love { background-color: #e91e63; color: #fff; }
+        .emotion-disgust { background-color: #8bc34a; color: #000; }
+        .emotion-neutral { background-color: #9e9e9e; color: #000; }
+        .emotion-curious { background-color: #00bcd4; color: #000; }
+        .emotion-frustrated { background-color: #795548; color: #fff; }
+        .emotion-hopeful { background-color: #4caf50; color: #000; }
+        
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .action-btn {
+            background-color: var(--dark-surface);
+            color: var(--text-color);
+            border: 1px solid var(--highlight);
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .action-btn:hover {
+            background-color: var(--highlight);
+            color: #000;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+        
+        .close-btn {
+            color: var(--text-color);
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        pre {
+            background-color: var(--dark-surface);
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Betty AI <span style="font-size: 0.8rem; color: var(--secondary);">ReflexOS Hybrid</span></h1>
+    </header>
+    
+    <div class="container">
+        <div class="chat-container" id="chatContainer">
+            <!-- Messages will be added here -->
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="พิมพ์ข้อความที่นี่..." />
+            <button id="sendButton">ส่ง</button>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="action-btn" id="timelineBtn">ดูไทม์ไลน์</button>
+            <button class="action-btn" id="journalDayBtn">สร้างบันทึกประจำวัน</button>
+            <button class="action-btn" id="emotionReportBtn">รายงานอารมณ์</button>
+        </div>
+        
+        <div class="memory-status">
+            <div class="memory-card">
+                <h3>ความทรงจำระยะสั้น</h3>
+                <p><span id="shorttermCount">0</span> รายการ</p>
+            </div>
+            <div class="memory-card">
+                <h3>ความทรงจำระยะยาว</h3>
+                <p><span id="longtermCount">0</span> รายการ</p>
+            </div>
+            <div class="memory-card">
+                <h3>ความจำแบบ Capsule</h3>
+                <p><span id="capsuleCount">0</span> รายการ</p>
+            </div>
+            <div class="memory-card">
+                <h3>อารมณ์หลัก</h3>
+                <p id="dominantEmotion">neutral</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <div id="timelineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeTimelineModal">&times;</span>
+            <h2>ไทม์ไลน์การสนทนา</h2>
+            <pre id="timelineContent">กำลังโหลดข้อมูล...</pre>
+        </div>
+    </div>
+    
+    <div id="journalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeJournalModal">&times;</span>
+            <h2>บันทึกความทรงจำ</h2>
+            <pre id="journalContent">กำลังโหลดข้อมูล...</pre>
+        </div>
+    </div>
+    
+    <div id="emotionReportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeEmotionReportModal">&times;</span>
+            <h2>รายงานอารมณ์</h2>
+            <pre id="emotionReportContent">กำลังโหลดข้อมูล...</pre>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatContainer = document.getElementById('chatContainer');
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+            const shorttermCount = document.getElementById('shorttermCount');
+            const longtermCount = document.getElementById('longtermCount');
+            const capsuleCount = document.getElementById('capsuleCount');
+            const dominantEmotion = document.getElementById('dominantEmotion');
+            
+            // Modal elements
+            const timelineBtn = document.getElementById('timelineBtn');
+            const journalDayBtn = document.getElementById('journalDayBtn');
+            const emotionReportBtn = document.getElementById('emotionReportBtn');
+            
+            const timelineModal = document.getElementById('timelineModal');
+            const journalModal = document.getElementById('journalModal');
+            const emotionReportModal = document.getElementById('emotionReportModal');
+            
+            const closeTimelineModal = document.getElementById('closeTimelineModal');
+            const closeJournalModal = document.getElementById('closeJournalModal');
+            const closeEmotionReportModal = document.getElementById('closeEmotionReportModal');
+            
+            const timelineContent = document.getElementById('timelineContent');
+            const journalContent = document.getElementById('journalContent');
+            const emotionReportContent = document.getElementById('emotionReportContent');
+            
+            // Add initial Betty message
+            addMessage("สวัสดีค่ะ ที่รัก ฉันพร้อมคุยกับคุณแล้วค่ะ 😊", "betty", "happy");
+            
+            // Load memory stats on page load
+            fetchMemoryStats();
+            
+            // Send message when button clicked
+            sendButton.addEventListener("click", sendMessage);
+            
+            // Send message when Enter key is pressed
+            userInput.addEventListener("keypress", function(e) {
+                if (e.key === "Enter") {
+                    sendMessage();
+                }
+            });
+            
+            // Timeline button
+            timelineBtn.addEventListener("click", function() {
+                fetchTimeline();
+                timelineModal.style.display = "flex";
+            });
+            
+            // Journal day button
+            journalDayBtn.addEventListener("click", function() {
+                createJournal("day");
+                journalModal.style.display = "flex";
+            });
+            
+            // Emotion report button
+            emotionReportBtn.addEventListener("click", function() {
+                createEmotionReport("day");
+                emotionReportModal.style.display = "flex";
+            });
+            
+            // Close modal buttons
+            closeTimelineModal.addEventListener("click", function() {
+                timelineModal.style.display = "none";
+            });
+            
+            closeJournalModal.addEventListener("click", function() {
+                journalModal.style.display = "none";
+            });
+            
+            closeEmotionReportModal.addEventListener("click", function() {
+                emotionReportModal.style.display = "none";
+            });
+            
+            // Close modals when clicking outside
+            window.addEventListener("click", function(event) {
+                if (event.target === timelineModal) {
+                    timelineModal.style.display = "none";
+                }
+                if (event.target === journalModal) {
+                    journalModal.style.display = "none";
+                }
+                if (event.target === emotionReportModal) {
+                    emotionReportModal.style.display = "none";
+                }
+            });
+            
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message === "") return;
+                
+                // Add user message to chat
+                addMessage(message, "user");
+                
+                // Clear input
+                userInput.value = "";
+                
+                // Call API to get Betty response
+                fetch("/api/chat", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        message: message
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Add Betty response to chat
+                    addMessage(data.response, "betty", data.emotion);
+                    
+                    // Update memory stats
+                    updateMemoryStats(data.memory_stats);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    addMessage("ขออภัยค่ะ มีข้อผิดพลาดเกิดขึ้น", "betty", "neutral");
+                });
+            }
+            
+            function addMessage(text, sender, emotion = null) {
+                const messageDiv = document.createElement("div");
+                messageDiv.classList.add("message");
+                
+                if (sender === "user") {
+                    messageDiv.classList.add("user-message");
+                    messageDiv.textContent = text;
+                } else {
+                    messageDiv.classList.add("betty-message");
+                    messageDiv.textContent = text;
+                    
+                    if (emotion) {
+                        const emotionTag = document.createElement("span");
+                        emotionTag.classList.add("emotion-tag", `emotion-${emotion}`);
+                        emotionTag.textContent = emotion;
+                        messageDiv.appendChild(emotionTag);
+                    }
+                }
+                
+                chatContainer.appendChild(messageDiv);
+                
+                // Scroll to bottom
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            function fetchMemoryStats() {
+                fetch("/api/memory")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    updateMemoryStats(data);
+                })
+                .catch(error => {
+                    console.error("Error fetching memory stats:", error);
+                });
+            }
+            
+            function updateMemoryStats(data) {
+                if (data && data.memory) {
+                    shorttermCount.textContent = data.memory.shortterm_count || 0;
+                    longtermCount.textContent = data.memory.longterm_count || 0;
+                    capsuleCount.textContent = data.memory.capsule_count || 0;
+                    
+                    if (data.emotion && data.emotion.dominant_emotion) {
+                        dominantEmotion.textContent = data.emotion.dominant_emotion;
+                    }
+                }
+            }
+            
+            function fetchTimeline() {
+                timelineContent.textContent = "กำลังโหลดไทม์ไลน์...";
+                
+                fetch("/api/timeline?limit=15")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.timeline) {
+                        timelineContent.textContent = data.timeline;
+                    } else {
+                        timelineContent.textContent = "ไม่พบข้อมูลไทม์ไลน์";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching timeline:", error);
+                    timelineContent.textContent = "เกิดข้อผิดพลาดในการโหลดไทม์ไลน์";
+                });
+            }
+            
+            function createJournal(period) {
+                journalContent.textContent = "กำลังสร้างบันทึก...";
+                
+                fetch("/api/journal", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        period: period
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.path) {
+                        journalContent.textContent = `บันทึกถูกสร้างที่: ${data.path}\nพบความทรงจำ: ${data.memory_count} รายการ\nอารมณ์หลัก: ${data.dominant_emotion}`;
+                        
+                        // อ่านเนื้อหาบันทึก
+                        fetch(`/memory/journal/${data.filename}`)
+                        .then(response => response.text())
+                        .then(content => {
+                            journalContent.textContent = content;
+                        });
+                    } else {
+                        journalContent.textContent = "ไม่สามารถสร้างบันทึกได้";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error creating journal:", error);
+                    journalContent.textContent = "เกิดข้อผิดพลาดในการสร้างบันทึก";
+                });
+            }
+            
+            function createEmotionReport(period) {
+                emotionReportContent.textContent = "กำลังสร้างรายงานอารมณ์...";
+                
+                fetch("/api/emotion/report", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        period: period
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.report) {
+                        emotionReportContent.textContent = data.report;
+                    } else {
+                        emotionReportContent.textContent = "ไม่สามารถสร้างรายงานอารมณ์ได้";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error creating emotion report:", error);
+                    emotionReportContent.textContent = "เกิดข้อผิดพลาดในการสร้างรายงานอารมณ์";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
